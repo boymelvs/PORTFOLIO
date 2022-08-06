@@ -1,0 +1,47 @@
+.hamburger {
+   @include flexBox(column, center, center, 0.5rem);
+   position: relative;
+   background: transparent;
+   transition: all 300ms ease-in-out;
+   z-index: 99;
+
+   .line {
+      width: 4rem;
+      border: 0.2rem solid $whisper;
+      transition: all 500ms ease-in-out;
+   }
+
+   &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+   }
+}
+
+#burger-checkbox {
+   display: none;
+   position: absolute;
+   visibility: hidden;
+}
+
+#burger-checkbox:checked ~ .hamburger > .line-top {
+   width: 2.8rem;
+   transform: rotate(45deg);
+   transform-origin: left top;
+}
+
+#burger-checkbox:checked ~ .hamburger > .line-inner {
+   visibility: hidden;
+   transition: all 250ms ease-in-out;
+}
+
+#burger-checkbox:checked ~ .hamburger > .line-bottom {
+   width: 2.8rem;
+   transform: rotate(-45deg);
+   transform-origin: left bottom;
+}
+
+@media (min-width: 768px) {
+   .hamburger {
+      display: none;
+   }
+}

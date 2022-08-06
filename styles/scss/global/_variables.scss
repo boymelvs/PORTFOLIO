@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@300;400;500;600&display=swap");
+
+// colors
+$navy-blue: hsl(204, 82%, 42%);
+$black-pearl: hsl(212, 29%, 13%);
+$spring-sun: hsl(60, 57%, 86%);
+$whisper: hsl(0, 0%, 90%);
+$azure: hsl(180, 8%, 97%);
+$sky-blue: hsl(204, 69%, 72%);
+
+$azure: rgb(247, 248, 248);
+$whispers: rgb(230, 230, 230);
+
+$lochmara: hsl(204, 68%, 37%);
+$jacksons-purple: hsl(233, 51%, 36%);
+$blizzard-blue: hsl(185, 61%, 78%);
+$columbia-blue: hsl(197, 100%, 78%);
+$pattens-blue: hsl(209, 87%, 91%);
+
+/* fonts */
+$font-size-10: 62.5%; /* 10px */
+$font-fam-work: "Work Sans", sans-serif;
+$font-fam-montserrat: "Montserrat", sans-serif;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-600: 600;
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: $font-size-10;
+   scroll-behavior: smooth;
+}
+
+body {
+   font-size: 1.6rem;
+   font-family: $font-fam-work;
+   font-weight: $font-weight-400;
+   background: $whisper;
+}
