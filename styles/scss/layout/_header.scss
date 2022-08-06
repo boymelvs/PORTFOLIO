@@ -1,10 +1,16 @@
 .my-header {
    @include flexBox(row, center, space-between, 0);
-   width: 100%;
    max-width: 144rem;
    background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
-
    padding: 2rem;
+   height: 100%;
+   width: 100%;
+}
+
+.nav-bar {
+   @include flexBox(row, start, space-between, 0);
+   width: 100%;
+   max-width: 144rem;
    position: fixed;
    top: 0;
 }

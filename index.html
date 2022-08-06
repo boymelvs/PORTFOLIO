@@ -12,7 +12,7 @@
    </head>
 
    <body>
-      <div class="container">
+      <div id="home" class="container">
          <header class="my-header">
             <input type="checkbox" name="burger-checkbox" id="burger-checkbox" aria-label="burger checkbox" />
 
@@ -20,18 +20,23 @@
                <a href="#" class="logo">
                   <img src="./images/logo/opening.png" class="opening-tag" alt="Opening Html Tag Logo" />
 
-                  <img src="./images/logo/port.png" class="portfolio-text" alt="Portfolio Logo" />
+                  <img src="./images/logo/melvin.png" class="melvin-text" alt="Melvin Text Logo" />
+
+                  <img src="./images/logo/port.png" class="portfolio-text" alt="Portfolio Text Logo" />
 
                   <img src="./images/logo/closing.png" class="closing-tag" alt="Closing Html Tag Logo" />
                </a>
             </div>
 
-            <ul class="menu">
-               <li class="menu-item"><a href="#about">About</a></li>
-               <li class="menu-item"><a href="#skills">Skills</a></li>
-               <li class="menu-item"><a href="#projects">Projects</a></li>
-               <li class="menu-item"><a href="#contact">Contact</a></li>
-            </ul>
+            <nav class="nav-bar">
+               <ul class="menu">
+                  <li class="menu-item"><a href="#home">Home</a></li>
+                  <li class="menu-item"><a href="#projects">Projects</a></li>
+                  <li class="menu-item"><a href="#skills">Skills</a></li>
+                  <li class="menu-item"><a href="#about">About</a></li>
+                  <li class="menu-item"><a href="#contact">Contact</a></li>
+               </ul>
+            </nav>
 
             <label for="burger-checkbox" class="hamburger">
                <span class="line line-top"></span>
@@ -41,15 +46,65 @@
          </header>
 
          <main class="my-main">
-            <section id="about"></section>
-            <section id="skills"></section>
+            <section id="hero">
+               <div class="greeting">Hi, I'm Melvin</div>
+               <div class="position">FULLSTACK DEVELOPER</div>
+            </section>
             <section id="projects"></section>
+            <section id="skills"></section>
+            <section id="about">
+               <!-- A Freelance Full-Stack Developer based in the Philippines. -->
+               <!-- Currently, I'm seeking for an opportunity where I can implement and further my skills simultaneously. -->
+            </section>
             <section id="contact"></section>
          </main>
 
          <footer class="my-footer">
-            <div class="copyright"><img src="./images/copyright.svg" alt="copyright" /> 2022 melvin</div>
-            <div class="social-media"></div>
+            <div class="footer-content">
+               <nav class="nav-footer footer-menu">
+                  <ul class="menu">
+                     <li class="menu-item footer-item"><a href="#home">Home</a></li>
+                     <li class="menu-item footer-item"><a href="#projects">Projects</a></li>
+                     <li class="menu-item footer-item"><a href="#skills">Skills</a></li>
+                     <li class="menu-item footer-item"><a href="#about">About</a></li>
+                  </ul>
+               </nav>
+
+               <div class="contact-social-container">
+                  <div class="footer-contact">
+                     <div class="contacts">Contacts:</div>
+
+                     <div class="phone">
+                        <img src="./images/contact/icon-phone.svg" alt="Phone Icon" />
+                        <div class="phone-number">0949 920 0932</div>
+                     </div>
+
+                     <div class="email">
+                        <img src="./images/contact/icon-email.svg" alt="Email Icon" />
+                        <div class="email-add">melvin.enmocino@gmail.com</div>
+                     </div>
+                  </div>
+
+                  <div class="social-media">
+                     <div class="social-media-text">Social Media:</div>
+                     <div class="social-media-icon">
+                        <a href="https://linkedin.com" target="_blank" rel="noreferrer noopener">
+                           <img src="./images/social-media/linkedin.svg" class="linkedin" alt="Linkedin Logo" />
+                        </a>
+
+                        <a href="https://github.com/boymelvs" target="_blank" rel="noreferrer noopener">
+                           <img src="./images/social-media/github.svg" alt="Github Logo" />
+                        </a>
+
+                        <a href="https://www.facebook.com/0000z0zz/" target="_blank" rel="noreferrer noopener">
+                           <img src="./images/social-media/facebook.svg" alt="Facebook Logo" />
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="copyright"><img src="./images/copyright.svg" alt="copyright" /> 2022 Melvin Enmocino</div>
          </footer>
       </div>
       <script src="./scripts/index.js"></script>

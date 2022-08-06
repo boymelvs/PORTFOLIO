@@ -1,8 +1,6 @@
-.menu {
-   @include flexBox(column, start, start, 2.5rem);
-   padding: 5rem 0 0 10rem;
+.nav-bar {
    width: 100%;
-   text-align: left;
+
    background: linear-gradient(45deg, $black-pearl 0%, $lochmara 150%);
    position: absolute;
    top: 0;
@@ -10,9 +8,10 @@
    min-height: 100vh;
    transform: translateY(-250%);
    transition: transform 500ms ease-in-out;
+   border: 1px solid red;
 
    @media (min-width: 768px) {
-      @include flexBox(row, center, end, 3.5rem);
+      @include flexBox(row, center, end, 2.5rem);
       padding: 0;
       position: unset;
       min-height: unset;
@@ -21,36 +20,87 @@
       background: transparent;
    }
 
-   .menu-item {
-      list-style-type: none;
-      position: relative;
+   .menu {
+      @include flexBox(column, start, start, 2.5rem);
+      width: 100%;
+      padding: 5rem 0 0 10rem;
+      text-align: left;
 
-      &::before {
-         content: "";
-         position: absolute;
-         bottom: -0.5rem;
-         left: 0;
-         width: 100%;
-         border-bottom: 0.3rem solid $azure;
-         transform: scale(0, 1);
-         transform-origin: right;
-         transition: transform 300ms ease-in-out;
+      @media (min-width: 768px) {
+         @include flexBox(row, center, end, 2.5rem);
+         padding: 0;
       }
 
-      &:hover::before {
-         transform: scale(1, 1);
-         transform-origin: left;
-      }
+      .menu-item {
+         list-style-type: none;
+         position: relative;
 
-      a {
-         font-size: 2rem;
-         text-decoration: none;
-         color: $azure;
-         font-weight: $font-weight-400;
+         &::before {
+            content: "";
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 100%;
+            border-bottom: 0.3rem solid $azure;
+            transform: scale(0, 1);
+            transform-origin: right;
+            transition: transform 300ms ease-in-out;
+         }
+
+         &:hover::before {
+            transform: scale(1, 1);
+            transform-origin: left;
+         }
+
+         a {
+            font-size: 2rem;
+            text-decoration: none;
+            color: $azure;
+            font-weight: $font-weight-400;
+         }
       }
    }
 }
 
-#burger-checkbox:checked ~ .menu {
+#burger-checkbox:checked ~ .nav-bar {
    transform: translateY(0%);
+}
+
+/* footer */
+.footer-menu {
+   @include flexBox(row, end, center, 1rem);
+   padding: 0;
+   bottom: 5rem;
+   min-height: unset;
+   transform: unset;
+   transition: transform 00ms ease-in-out;
+   background: transparent;
+
+   @media (max-width: 280px) {
+      @include flexBox(column, start, center, 1rem);
+      position: unset;
+   }
+
+   @media (min-width: 425px) {
+      gap: 2.5rem;
+   }
+
+   @media (min-width: 550px) {
+      @include flexBox(column, start, center, 2rem);
+      width: 50%;
+      position: unset;
+   }
+
+   @media (min-width: 992px) {
+      @include flexBox(column, start, center, 2rem);
+      width: 70%;
+   }
+
+   .footer-item a {
+      font-size: 1.4rem;
+
+      @media (min-width: 768px) {
+         font-size: 1.6rem;
+      }
+   }
 }

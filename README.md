@@ -2,9 +2,9 @@
 
 ### A Full Stack Developer from the Philippines 👨‍💻
 
--  🌱 I’m currently enrolled at **KODEGOPH**.
--  👀 I’m interested to learn **Node js**, **React js**.
--  📫 How to reach me **melvin.enmocino@gmail.com**
+-  🌱 I’m currently enrolled at **KODEGOPH Bootcamp**.
+-  👀 Interested to learn **Node js**, **React js**.
+-  📫 How to reach me? **melvin.enmocino@gmail.com**
 
 ### Connect with me:
 
@@ -15,7 +15,7 @@
 
 </p>
 
-### Language and tools:
+### Language and tools that are used to build, run, test, and deploy a website:
 
 <!-- HTML5 logo-->
 <p align="left">
@@ -49,17 +49,9 @@
 
 <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img align="left" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NODE JS" style="padding-right:10px;" /></a>
 
-<!-- FIGMA logo -->
-
-<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img align="left" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" style="padding-right:10px;" /></a>
-
 <!-- GIT logo -->
 
 <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img align="left" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="padding-right:10px;" /></a>
-
-<!-- NPM logo -->
-
-<a href="https://www.npmjs.com/" target="_blank" rel="noreferrer"><img align="left" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" style="padding-right:10px;" /></a>
 
 <!-- VS CODE logo -->
 
@@ -91,8 +83,24 @@
 <!-- GITHUB CARDS -->
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1px">
 
-![Melvin's Cards](https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=online-calculator)
+<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=travel-and-tours" alt="Travel and Tours Website" /></a>
 
-![Melvin's Cards](https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=online-calculator)
+<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=INTRO-COMPONENT-WITH-SIGNUP-FORM" alt="Signup Form Website" /></a>
+
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:1px">
+
+<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=online-calculator" alt="Online Calculator" /></a>
+
+<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=pricing-component-with-toggle-master" alt="Pricing Component" /></a>
+
+</div>
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:1px">
+
+<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=chat-app-css-illustration-master" alt="Chat Illustration" /></a>
+
+<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=advice-generator-app-main" alt="Advice Generator App" /></a>
 
 </div>

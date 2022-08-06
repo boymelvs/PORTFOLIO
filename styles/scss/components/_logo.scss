@@ -1,40 +1,77 @@
 .logo-container {
    height: 100%;
+   width: 100%;
    background: transparent;
 
    .logo {
-      @include flexBox(row, center, start, 0.5rem);
+      @include flexBox(row, center, start, 0.3rem);
 
       img {
-         width: 7rem;
-         height: 3rem;
+         width: 6rem;
+         height: 2.5rem;
+         visibility: hidden;
+         transition: all 500ms ease-in-out;
+
+         @media (min-width: 950px) {
+            width: 12rem;
+            height: 6rem;
+         }
       }
 
       .opening-tag {
-         width: 6rem;
-         visibility: hidden;
-         transition: all 400ms ease-in-out;
+         margin-left: -1rem;
+      }
+
+      .melvin-text {
+         width: 8rem;
+         height: 1.5rem;
+         margin-left: -14rem;
+
+         // @media (max-width: 374px) {
+         //    display: none;
+         // }
+
+         @media (min-width: 950px) {
+            width: 11rem;
+            height: 4rem;
+            margin-left: -22rem;
+         }
       }
 
       .portfolio-text {
-         width: 9rem;
-         margin-left: -6rem;
-         visibility: hidden;
-         transition: all 300ms ease-in-out;
+         width: 8.5rem;
+         height: 1.5rem;
+         margin-left: -10rem;
+
+         @media (min-width: 950px) {
+            width: 14rem;
+            height: 4rem;
+            margin-left: -14rem;
+         }
       }
 
       .closing-tag {
          overflow: hidden;
-         margin-left: -10rem;
+         visibility: visible;
+         margin-left: 1rem;
          transition: all 500ms ease-in-out;
+
+         @media (min-width: 950px) {
+            margin-left: -1rem;
+         }
       }
 
       &:hover .opening-tag {
          visibility: visible;
       }
 
-      &:hover .portfolio-text {
+      &:hover .melvin-text {
          margin-left: unset;
+         visibility: visible;
+      }
+
+      &:hover .portfolio-text {
+         margin-left: 0.5rem;
          visibility: visible;
       }
 
