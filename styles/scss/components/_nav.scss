@@ -1,14 +1,12 @@
 .nav-bar {
-   width: 100%;
-
    background: linear-gradient(45deg, $black-pearl 0%, $lochmara 150%);
    position: absolute;
    top: 0;
    left: 0;
    min-height: 100vh;
+   width: 100%;
    transform: translateY(-250%);
    transition: transform 500ms ease-in-out;
-   border: 1px solid red;
 
    @media (min-width: 768px) {
       @include flexBox(row, center, end, 2.5rem);
@@ -69,11 +67,10 @@
 /* footer */
 .footer-menu {
    @include flexBox(row, end, center, 1rem);
-   padding: 0;
+   width: 100%;
+   position: absolute;
+   left: 0;
    bottom: 5rem;
-   min-height: unset;
-   transform: unset;
-   transition: transform 00ms ease-in-out;
    background: transparent;
 
    @media (max-width: 280px) {
@@ -86,21 +83,23 @@
    }
 
    @media (min-width: 550px) {
-      @include flexBox(column, start, center, 2rem);
-      width: 50%;
+      @include flexBox(column, start, space-between, 2rem);
       position: unset;
    }
 
    @media (min-width: 992px) {
       @include flexBox(column, start, center, 2rem);
-      width: 70%;
+      width: 85%;
    }
 
-   .footer-item a {
-      font-size: 1.4rem;
+   .footer-item {
+      list-style-type: none;
 
-      @media (min-width: 768px) {
+      a {
          font-size: 1.6rem;
+         text-decoration: none;
+         color: $azure;
+         font-weight: $font-weight-400;
       }
    }
 }

@@ -1,16 +1,21 @@
 .my-header {
    @include flexBox(row, center, space-between, 0);
    max-width: 144rem;
-   background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
    padding: 2rem;
-   height: 100%;
    width: 100%;
+   background: transparent;
+
+   transition: all 500ms ease-in;
+   background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
+
+   &.active {
+      position: fixed;
+      top: 0;
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+   }
 }
 
 .nav-bar {
    @include flexBox(row, start, space-between, 0);
    width: 100%;
-   max-width: 144rem;
-   position: fixed;
-   top: 0;
 }

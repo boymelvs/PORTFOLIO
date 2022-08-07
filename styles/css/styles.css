@@ -29,10 +29,16 @@ body {
   justify-content: space-between;
   gap: 0;
   max-width: 144rem;
-  background: linear-gradient(45deg, hsl(212deg, 29%, 13%) 0%, hsl(204deg, 82%, 42%) 150%);
   padding: 2rem;
-  height: 100%;
   width: 100%;
+  background: transparent;
+  transition: all 500ms ease-in;
+  background: linear-gradient(45deg, hsl(212deg, 29%, 13%) 0%, hsl(204deg, 82%, 42%) 150%);
+}
+.my-header.active {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
 }
 
 .nav-bar {
@@ -42,9 +48,6 @@ body {
   justify-content: space-between;
   gap: 0;
   width: 100%;
-  max-width: 144rem;
-  position: fixed;
-  top: 0;
 }
 
 .logo-container {
@@ -79,6 +82,11 @@ body {
   height: 1.5rem;
   margin-left: -14rem;
 }
+@media (max-width: 374px) {
+  .logo-container .logo .melvin-text {
+    display: none;
+  }
+}
 @media (min-width: 950px) {
   .logo-container .logo .melvin-text {
     width: 11rem;
@@ -104,6 +112,11 @@ body {
   margin-left: 1rem;
   transition: all 500ms ease-in-out;
 }
+@media (max-width: 374px) {
+  .logo-container .logo .closing-tag {
+    margin-left: -4.5rem;
+  }
+}
 @media (min-width: 950px) {
   .logo-container .logo .closing-tag {
     margin-left: -1rem;
@@ -125,15 +138,14 @@ body {
 }
 
 .nav-bar {
-  width: 100%;
   background: linear-gradient(45deg, hsl(212deg, 29%, 13%) 0%, hsl(204deg, 68%, 37%) 150%);
   position: absolute;
   top: 0;
   left: 0;
   min-height: 100vh;
+  width: 100%;
   transform: translateY(-250%);
   transition: transform 500ms ease-in-out;
-  border: 1px solid red;
 }
 @media (min-width: 768px) {
   .nav-bar {
@@ -207,11 +219,10 @@ body {
   align-items: end;
   justify-content: center;
   gap: 1rem;
-  padding: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
   bottom: 5rem;
-  min-height: unset;
-  transform: unset;
-  transition: transform 0ms ease-in-out;
   background: transparent;
 }
 @media (max-width: 280px) {
@@ -234,9 +245,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
-    width: 50%;
     position: unset;
   }
 }
@@ -247,16 +257,17 @@ body {
     align-items: start;
     justify-content: center;
     gap: 2rem;
-    width: 70%;
+    width: 85%;
   }
+}
+.footer-menu .footer-item {
+  list-style-type: none;
 }
 .footer-menu .footer-item a {
-  font-size: 1.4rem;
-}
-@media (min-width: 768px) {
-  .footer-menu .footer-item a {
-    font-size: 1.6rem;
-  }
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: rgb(247, 248, 248);
+  font-weight: 400;
 }
 
 .hamburger {
@@ -311,6 +322,7 @@ body {
 .my-main {
   width: 100%;
   max-width: 144rem;
+  min-height: 100vh;
 }
 
 #hero {
@@ -344,7 +356,7 @@ footer .footer-content {
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   gap: 2rem;
   width: 100%;
 }
@@ -363,6 +375,7 @@ footer .footer-content .contact-social-container {
   align-items: start;
   justify-content: center;
   gap: 2rem;
+  width: 100%;
 }
 @media (min-width: 425px) {
   footer .footer-content .contact-social-container {
@@ -371,7 +384,6 @@ footer .footer-content .contact-social-container {
     align-items: start;
     justify-content: space-between;
     gap: 2rem;
-    width: 100%;
   }
 }
 footer .footer-content .contact-social-container .footer-contact {
@@ -452,6 +464,7 @@ footer .footer-content .contact-social-container .social-media .social-media-ico
 footer .copyright {
   font-size: 1rem;
   margin-top: 3rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
   footer .copyright {

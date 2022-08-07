@@ -16,7 +16,7 @@ footer {
    }
 
    .footer-content {
-      @include flexBox(column, start, center, 2rem);
+      @include flexBox(column, start, start, 2rem);
       width: 100%;
 
       @media (min-width: 550px) {
@@ -25,10 +25,10 @@ footer {
 
       .contact-social-container {
          @include flexBox(column, start, center, 2rem);
+         width: 100%;
 
          @media (min-width: 425px) {
             @include flexBox(row, start, space-between, 2rem);
-            width: 100%;
          }
 
          .footer-contact {
@@ -106,6 +106,7 @@ footer {
    .copyright {
       font-size: 1rem;
       margin-top: 3rem;
+      text-align: center;
 
       @media (min-width: 768px) {
          margin-top: 0;
