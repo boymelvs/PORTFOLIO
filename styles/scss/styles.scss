@@ -14,9 +14,20 @@
 
 @import "./layout/sections/home";
 
+@import "./layout/sections/projects";
+
+@import "./components/card";
+
+@import "./layout/sections/skills";
+
+@import "./layout/sections/about";
+
 @import "./layout/footer";
 
 .container {
    @include flexBox(column, center, center, 0);
    min-width: 32rem;
+   background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
+   max-width: 144rem;
+   margin: 0 auto;
 }

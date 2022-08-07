@@ -1,0 +1,44 @@
+#about {
+   background: $whisper;
+   color: $black-pearl;
+   padding: 5rem 2rem 2rem 2rem;
+
+   h2 {
+      font-size: 5rem;
+      text-align: center;
+
+      @media (min-width: 980px) {
+         text-align: left;
+      }
+   }
+
+   .about-content {
+      padding: 3rem 0;
+      border-top: 0.5rem solid $navy-blue;
+
+      .skills-subtitle {
+         @include flexBox(column, center, center, 0);
+         font-size: 2rem;
+         text-align: center;
+         font-weight: $font-weight-600;
+         width: 100%;
+         color: $black-pearl;
+
+         @media (min-width: 980px) {
+            align-items: flex-start;
+            text-align: left;
+         }
+
+         span:nth-child(2) {
+            padding-bottom: 0.5rem;
+            border-bottom: 0.15rem solid $black-pearl;
+         }
+      }
+
+      .skills-list {
+         @include flexBox(row, center, center, 2rem);
+         flex-wrap: wrap;
+         margin-top: 5rem;
+      }
+   }
+}

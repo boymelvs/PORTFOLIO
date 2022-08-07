@@ -1,0 +1,105 @@
+/* all about card projects */
+.card {
+   @include flexBox(column, center, center, 1rem);
+   max-width: 27rem;
+   max-height: 35rem;
+   border-radius: 1rem;
+   background: $whisper;
+   box-shadow: 0 0 0.3rem 0.1rem rgba(19, 125, 195, 0.8);
+
+   @media (min-width: 1301px) {
+      min-width: 30rem;
+      min-height: 40rem;
+   }
+
+   .card-title {
+      text-align: center;
+      width: 100%;
+      color: $black-pearl;
+
+      .project-title {
+         font-size: 2rem;
+         padding: 1rem;
+         font-weight: $font-weight-600;
+      }
+
+      .short-description {
+         font-size: 1.2rem;
+         padding: 0 1rem;
+      }
+   }
+
+   .card-image {
+      @include flexBox(column, center, center, 0);
+      width: 100%;
+      height: 25rem;
+      padding: 0 0.5rem;
+      position: relative;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         height: 100%;
+         border-radius: 0.5rem;
+         transition: all 1000ms ease-in-out;
+      }
+
+      .visit-btn {
+         position: absolute;
+         background: $navy-blue;
+         padding: 1rem 2rem;
+         border-radius: 0.5rem;
+         visibility: hidden;
+
+         .visit {
+            text-decoration: none;
+            color: $azure;
+            position: relative;
+
+            &::before {
+               content: "";
+               position: absolute;
+               bottom: -0.2rem;
+               left: 0;
+               width: 100%;
+               border-bottom: 0.2rem solid $azure;
+               transform: scale(0, 1);
+               transform-origin: right;
+               transition: transform 300ms ease-in-out;
+            }
+         }
+
+         &:hover > .visit::before {
+            cursor: pointer;
+            transform: scale(1, 1);
+            transform-origin: left 1rem;
+         }
+      }
+
+      &:hover > img {
+         cursor: pointer;
+         transform: scale(1.2);
+      }
+
+      &:hover > .visit-btn {
+         visibility: visible;
+         cursor: pointer;
+      }
+   }
+
+   .card-tag {
+      @include flexBox(row, center, center, 0.5rem);
+      flex-wrap: wrap;
+      padding: 0 0.5rem 1rem 0.5rem;
+      width: 100%;
+
+      span {
+         font-size: 1.1rem;
+         font-weight: $font-weight-300;
+         padding: 0.5rem;
+         border-radius: 2rem;
+         color: $azure;
+         background: $navy-blue;
+      }
+   }
+}

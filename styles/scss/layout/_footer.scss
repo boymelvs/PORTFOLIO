@@ -4,8 +4,8 @@ footer {
    max-width: 144rem;
    padding: 2rem;
    color: $azure;
-   background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
    position: relative;
+   border-top: 0.5rem solid $navy-blue;
 
    @media (min-width: 768px) {
       padding: 3rem 2rem;

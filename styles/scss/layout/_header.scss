@@ -4,14 +4,15 @@
    padding: 2rem;
    width: 100%;
    background: transparent;
-
-   transition: all 500ms ease-in;
-   background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
+   position: relative;
+   transition: all 300ms ease-in;
+   z-index: 90;
 
    &.active {
       position: fixed;
       top: 0;
-      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+      background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
+      box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
    }
 }
 
