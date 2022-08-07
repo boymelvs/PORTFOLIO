@@ -328,6 +328,22 @@
 }
 .footer-menu .footer-item {
   list-style-type: none;
+  position: relative;
+}
+.footer-menu .footer-item::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  border-bottom: 0.3rem solid rgb(247, 248, 248);
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform 300ms ease-in-out;
+}
+.footer-menu .footer-item:hover::before {
+  transform: scale(1, 1);
+  transform-origin: left;
 }
 .footer-menu .footer-item a {
   font-size: 1.6rem;
@@ -473,7 +489,7 @@
 #projects .see-more-projects a span::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -0.5rem;
   left: 0;
   width: 100%;
   border-bottom: 0.3rem solid hsl(204deg, 82%, 42%);
@@ -496,17 +512,11 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  max-width: 27rem;
-  max-height: 35rem;
+  width: 28rem;
+  height: 35rem;
   border-radius: 1rem;
   background: hsl(0deg, 0%, 90%);
   box-shadow: 0 0 0.3rem 0.1rem rgba(19, 125, 195, 0.8);
-}
-@media (min-width: 1301px) {
-  .card {
-    min-width: 30rem;
-    min-height: 40rem;
-  }
 }
 .card .card-title {
   text-align: center;
@@ -671,7 +681,7 @@
   padding: 3rem 0;
   border-top: 0.5rem solid hsl(204deg, 82%, 42%);
 }
-#about .about-content .skills-subtitle {
+#about .about-content .about-subtitle {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -684,23 +694,86 @@
   color: hsl(212deg, 29%, 13%);
 }
 @media (min-width: 980px) {
-  #about .about-content .skills-subtitle {
+  #about .about-content .about-subtitle {
     align-items: flex-start;
     text-align: left;
   }
 }
-#about .about-content .skills-subtitle span:nth-child(2) {
+#about .about-content .about-subtitle span {
   padding-bottom: 0.5rem;
   border-bottom: 0.15rem solid hsl(212deg, 29%, 13%);
 }
-#about .about-content .skills-list {
+#about .about-content .about-list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 3rem;
+}
+#about .about-content .about-list .about-para {
+  font-size: 2rem;
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  #about .about-content .about-list .about-para {
+    padding: 0 5rem;
+  }
+}
+#about .about-content .about-list .recognition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  color: hsl(212deg, 29%, 13%);
+}
+@media (min-width: 980px) {
+  #about .about-content .about-list .recognition {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+#about .about-content .about-list .recognition span {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.15rem solid hsl(212deg, 29%, 13%);
+}
+#about .about-content .about-list .recognition ul {
+  margin-top: 3rem;
+}
+#about .about-content .about-list .recognition ul li {
+  list-style-type: none;
+}
+@media (min-width: 768px) {
+  #about .about-content .about-list .recognition ul li {
+    padding: 0 5rem;
+  }
+}
+#about .about-content .about-list .recognition ul li a {
+  text-decoration: none;
+  color: hsl(212deg, 29%, 13%);
+  position: relative;
+}
+#about .about-content .about-list .recognition ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  border-bottom: 0.3rem solid hsl(204deg, 82%, 42%);
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform 300ms ease-in-out;
+}
+#about .about-content .about-list .recognition ul li a:hover::before {
+  cursor: pointer;
+  transform: scale(1, 1);
+  transform-origin: left;
 }
 
 footer {

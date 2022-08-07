@@ -16,7 +16,7 @@
       padding: 3rem 0;
       border-top: 0.5rem solid $navy-blue;
 
-      .skills-subtitle {
+      .about-subtitle {
          @include flexBox(column, center, center, 0);
          font-size: 2rem;
          text-align: center;
@@ -29,16 +29,80 @@
             text-align: left;
          }
 
-         span:nth-child(2) {
+         span {
             padding-bottom: 0.5rem;
             border-bottom: 0.15rem solid $black-pearl;
          }
       }
 
-      .skills-list {
-         @include flexBox(row, center, center, 2rem);
-         flex-wrap: wrap;
-         margin-top: 5rem;
+      .about-list {
+         @include flexBox(column, flex-start, center, 2rem);
+         margin-top: 3rem;
+
+         .about-para {
+            font-size: 2rem;
+            text-align: justify;
+
+            @media (min-width: 768px) {
+               padding: 0 5rem;
+            }
+         }
+
+         .recognition {
+            @include flexBox(column, center, center, 0);
+            margin-top: 3rem;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: $font-weight-600;
+            width: 100%;
+            color: $black-pearl;
+
+            @media (min-width: 980px) {
+               align-items: flex-start;
+               text-align: left;
+            }
+
+            span {
+               padding-bottom: 0.5rem;
+               border-bottom: 0.15rem solid $black-pearl;
+            }
+
+            ul {
+               margin-top: 3rem;
+
+               li {
+                  list-style-type: none;
+
+                  @media (min-width: 768px) {
+                     padding: 0 5rem;
+                  }
+
+                  a {
+                     text-decoration: none;
+                     color: $black-pearl;
+                     position: relative;
+
+                     &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -0.5rem;
+                        left: 0;
+                        width: 100%;
+                        border-bottom: 0.3rem solid $navy-blue;
+                        transform: scale(0, 1);
+                        transform-origin: right;
+                        transition: transform 300ms ease-in-out;
+                     }
+
+                     &:hover::before {
+                        cursor: pointer;
+                        transform: scale(1, 1);
+                        transform-origin: left;
+                     }
+                  }
+               }
+            }
+         }
       }
    }
 }

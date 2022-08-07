@@ -1,16 +1,11 @@
 /* all about card projects */
 .card {
    @include flexBox(column, center, center, 1rem);
-   max-width: 27rem;
-   max-height: 35rem;
+   width: 28rem;
+   height: 35rem;
    border-radius: 1rem;
    background: $whisper;
    box-shadow: 0 0 0.3rem 0.1rem rgba(19, 125, 195, 0.8);
-
-   @media (min-width: 1301px) {
-      min-width: 30rem;
-      min-height: 40rem;
-   }
 
    .card-title {
       text-align: center;

@@ -63,7 +63,7 @@
             &::before {
                content: "";
                position: absolute;
-               bottom: 0;
+               bottom: -0.5rem;
                left: 0;
                width: 100%;
                border-bottom: 0.3rem solid $navy-blue;
