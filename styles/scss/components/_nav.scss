@@ -50,7 +50,12 @@
             transform-origin: left;
          }
 
-         a {
+         &.active::before {
+            transform: scale(1, 1);
+            transform-origin: left;
+         }
+
+         & a {
             font-size: 2rem;
             text-decoration: none;
             color: $azure;

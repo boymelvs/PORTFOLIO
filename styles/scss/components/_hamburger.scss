@@ -1,6 +1,7 @@
 .hamburger {
    @include flexBox(column, center, center, 0.5rem);
    position: relative;
+   padding: 0.1rem;
    background: transparent;
    transition: all 300ms ease-in-out;
    z-index: 99;
@@ -8,6 +9,7 @@
    .line {
       width: 4rem;
       border: 0.2rem solid $whisper;
+      background: $whisper;
       transition: all 500ms ease-in-out;
    }
 
