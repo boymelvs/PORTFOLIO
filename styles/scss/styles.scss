@@ -1,28 +1,24 @@
-@import "./global/variables";
+@import "./global/topology";
 
-@import "./global/mixins";
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 
-@import "./layout/header";
+html {
+   font-size: $font-size-10;
+   scroll-behavior: smooth;
+}
 
-@import "./components/logo";
-
-@import "./components/nav";
-
-@import "./components/hamburger";
-
-@import "./layout/main";
-
-@import "./layout/sections/home";
-
-@import "./layout/sections/projects";
-
-@import "./components/card";
-
-@import "./layout/sections/skills";
-
-@import "./layout/sections/about";
-
-@import "./layout/footer";
+body {
+   font-size: 1.6rem;
+   font-family: $font-fam-work;
+   font-weight: $font-weight-400;
+   color: $azure;
+}
 
 .container {
    @include flexBox(column, center, center, 0);

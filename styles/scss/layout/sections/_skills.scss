@@ -36,7 +36,7 @@
       }
 
       .skills-list {
-         @include flexBox(row, center, center, 2rem);
+         @include flexBox(row, center, center, 4rem);
          flex-wrap: wrap;
          margin-top: 5rem;
       }
@@ -44,8 +44,8 @@
 }
 
 .skill-card {
-   max-width: 15rem;
-   max-height: 15rem;
+   max-width: 17rem;
+   max-height: 17rem;
 
    img {
       width: 100%;

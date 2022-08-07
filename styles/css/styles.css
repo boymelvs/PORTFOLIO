@@ -1,26 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@300;400;500;600&display=swap");
 /* fonts */
 /* 10px */
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 400;
-  color: rgb(247, 248, 248);
-}
-
 .my-header {
   display: flex;
   flex-direction: row;
@@ -49,6 +29,92 @@ body {
   justify-content: space-between;
   gap: 0;
   width: 100%;
+}
+
+.logo-container {
+  height: 100%;
+  background: transparent;
+}
+.logo-container .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.3rem;
+}
+.logo-container .logo img {
+  width: 6rem;
+  height: 2.5rem;
+  visibility: hidden;
+  transition: all 500ms ease-in-out;
+}
+@media (min-width: 950px) {
+  .logo-container .logo img {
+    width: 12rem;
+    height: 6rem;
+  }
+}
+.logo-container .logo .opening-tag {
+  margin-left: -1rem;
+}
+.logo-container .logo .melvin-text {
+  width: 8rem;
+  height: 1.5rem;
+  margin-left: -14rem;
+}
+@media (max-width: 374px) {
+  .logo-container .logo .melvin-text {
+    display: none;
+  }
+}
+@media (min-width: 950px) {
+  .logo-container .logo .melvin-text {
+    width: 11rem;
+    height: 4rem;
+    margin-left: -22rem;
+  }
+}
+.logo-container .logo .portfolio-text {
+  width: 8.5rem;
+  height: 1.5rem;
+  margin-left: -10rem;
+}
+@media (min-width: 950px) {
+  .logo-container .logo .portfolio-text {
+    width: 14rem;
+    height: 4rem;
+    margin-left: -14rem;
+  }
+}
+.logo-container .logo .closing-tag {
+  overflow: hidden;
+  visibility: visible;
+  margin-left: 1rem;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 374px) {
+  .logo-container .logo .closing-tag {
+    margin-left: -4.5rem;
+  }
+}
+@media (min-width: 950px) {
+  .logo-container .logo .closing-tag {
+    margin-left: -1rem;
+  }
+}
+.logo-container .logo:hover .opening-tag {
+  visibility: visible;
+}
+.logo-container .logo:hover .melvin-text {
+  margin-left: unset;
+  visibility: visible;
+}
+.logo-container .logo:hover .portfolio-text {
+  margin-left: 0.5rem;
+  visibility: visible;
+}
+.logo-container .logo:hover .closing-tag {
+  margin-left: unset;
 }
 
 .logo-container {
@@ -335,7 +401,7 @@ body {
 #projects {
   background: hsl(0deg, 0%, 90%);
   color: hsl(212deg, 29%, 13%);
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem;
 }
 #projects h2 {
   font-size: 5rem;
@@ -574,14 +640,14 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   flex-wrap: wrap;
   margin-top: 5rem;
 }
 
 .skill-card {
-  max-width: 15rem;
-  max-height: 15rem;
+  max-width: 17rem;
+  max-height: 17rem;
 }
 .skill-card img {
   width: 100%;
@@ -782,6 +848,26 @@ footer .copyright {
 footer .copyright img {
   width: 1rem;
   height: 1rem;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: rgb(247, 248, 248);
 }
 
 .container {
