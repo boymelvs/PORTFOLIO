@@ -83,10 +83,10 @@
 <!-- GITHUB CARDS -->
 <div align=center styles="display:grid; grid-template-columns: 1fr 1fr; gap:1px;">
 
-<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=travel-and-tours" alt="Travel and Tours Website" />
+<a href="https://boymelvs.github.io/travel-and-tours/" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=travel-and-tours" alt="Travel and Tours Website" />
 
 </a>
 
-<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=online-calculator" alt="Online Calculator" /></a>
+<a href="https://boymelvs.github.io/online-calculator/" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=online-calculator" alt="Online Calculator" /></a>
 
 </div>
