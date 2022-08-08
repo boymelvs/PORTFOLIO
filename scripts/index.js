@@ -12,9 +12,12 @@ window.addEventListener("scroll", (e) => {
 const activeLink = (value) => {
    const findLocation = value.getBoundingClientRect();
 
-   if (findLocation.y > window.scrollY && window.scrollY < findLocation.height) {
+   if (window.scrollY > findLocation.y && findLocation.top < 0 && findLocation.bottom > 0) {
       const getId = value.getAttribute("id");
-      menuItems[1].classList.remove("active");
+
+      menuItems.forEach((item) => {
+         item.classList.contains(`${getId}`) ? item.classList.add("active") : item.classList.remove("active");
+      });
 
       console.log(findLocation, "findLocation");
       console.log(findLocation.y, "y");
@@ -23,8 +26,6 @@ const activeLink = (value) => {
       console.log(findLocation.top, "top");
       console.log(findLocation.bottom, "bottom");
       console.log(getId, "getId");
-   } else {
-      menuItems[1].classList.add("active");
    }
 };
 
