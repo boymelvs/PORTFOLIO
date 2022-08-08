@@ -1,6 +1,34 @@
 #home {
-   min-height: 50vh;
    color: $azure;
-   padding-top: 10rem;
    width: 100%;
+   padding: 2rem;
+
+   @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+   }
+
+   & .left {
+      @include flexBox(column, center, center, 1rem);
+      text-align: center;
+
+      @media (min-width: 768px) {
+         grid-column: 1 / span 6;
+         text-align: left;
+
+         & .career {
+            font-size: 5rem;
+         }
+      }
+   }
+
+   & .right {
+      @media (min-width: 768px) {
+         grid-column: 7 / span 6;
+      }
+
+      & img {
+         width: 100%;
+      }
+   }
 }

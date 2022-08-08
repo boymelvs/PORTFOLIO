@@ -1,0 +1,17 @@
+const Menu = [
+    {
+        id: 1,
+        image: imgCupcakes,
+        name: "Cupcake Post",
+        category: "designs",
+        description: 'Social Media Advertising Template.',
+        tag: ["Figma ", " Adobe Illustrator"]
+    },
+    {
+        id: 2,
+        image: imgLuxLife,
+        name:"Lux Life and Style",
+        category: "designs",
+        description: 'Web Design',
+        tag: ["Adobe Photoshop "," Figma"]
+    }];

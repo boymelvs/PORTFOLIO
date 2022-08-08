@@ -29,6 +29,10 @@ const activeLink = (value) => {
       menuItems.forEach((item) => {
          addRemoveClasses(item, getId);
       });
+
+      footerMenuItems.forEach((item) => {
+         addRemoveClasses(item, getId);
+      });
    }
 };
 
