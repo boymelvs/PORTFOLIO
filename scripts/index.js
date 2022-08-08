@@ -4,33 +4,38 @@ const header = document.querySelector(".my-header");
 const sections = document.querySelectorAll("section");
 const project = document.querySelector("#projects");
 const menuItems = document.querySelectorAll(".menu-item");
+const footerMenuItems = document.querySelectorAll(".footer-item");
 
-window.addEventListener("scroll", (e) => {
-   window.scrollY > 50 ? header.classList.add("active") : header.classList.remove("active");
-});
+const addRemoveClasses = (value, id) => {
+   value.classList.contains(`${id}`) ? value.classList.add("active") : value.classList.remove("active");
+};
 
 const activeLink = (value) => {
-   const findLocation = value.getBoundingClientRect();
+   const findTop = value.offsetTop;
+   const findHeight = value.clientHeight;
+   const getId = value.getAttribute("id");
 
-   if (window.scrollY > findLocation.y && findLocation.top < 0 && findLocation.bottom > 0) {
-      const getId = value.getAttribute("id");
-
+   if (window.scrollY == 0 && getId == "home") {
       menuItems.forEach((item) => {
-         item.classList.contains(`${getId}`) ? item.classList.add("active") : item.classList.remove("active");
+         addRemoveClasses(item, getId);
       });
 
-      console.log(findLocation, "findLocation");
-      console.log(findLocation.y, "y");
-      console.log(window.scrollY, "scrollY");
-      console.log(findLocation.height, "height");
-      console.log(findLocation.top, "top");
-      console.log(findLocation.bottom, "bottom");
-      console.log(getId, "getId");
+      footerMenuItems.forEach((item) => {
+         addRemoveClasses(item, getId);
+      });
+   }
+
+   if (window.scrollY >= findTop - findHeight / 4) {
+      menuItems.forEach((item) => {
+         addRemoveClasses(item, getId);
+      });
    }
 };
 
-sections.forEach((section) => {
-   window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll", (e) => {
+   window.scrollY > 50 ? header.classList.add("active") : header.classList.remove("active");
+
+   sections.forEach((section) => {
       activeLink(section);
    });
 });

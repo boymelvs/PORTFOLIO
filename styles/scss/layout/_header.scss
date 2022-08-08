@@ -1,3 +1,9 @@
+@import "../components/logo";
+
+@import "../components/nav";
+
+@import "../components/hamburger";
+
 .my-header {
    @include flexBox(row, center, space-between, 0);
    max-width: 144rem;

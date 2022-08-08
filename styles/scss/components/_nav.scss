@@ -29,7 +29,7 @@
          padding: 0;
       }
 
-      .menu-item {
+      & .menu-item {
          list-style-type: none;
          position: relative;
 
@@ -97,7 +97,7 @@
       width: 85%;
    }
 
-   .footer-item {
+   & .footer-item {
       list-style-type: none;
       position: relative;
 
@@ -118,7 +118,12 @@
          transform-origin: left;
       }
 
-      a {
+      &.active::before {
+         transform: scale(1, 1);
+         transform-origin: left;
+      }
+
+      & a {
          font-size: 1.6rem;
          text-decoration: none;
          color: $azure;
