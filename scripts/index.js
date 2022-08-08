@@ -9,24 +9,27 @@ window.addEventListener("scroll", (e) => {
    window.scrollY > 50 ? header.classList.add("active") : header.classList.remove("active");
 });
 
-// sections.forEach((section) => {
-// });
-const findLocation = project.getBoundingClientRect();
-console.log(findLocation, "findLocation");
+const activeLink = (value) => {
+   const findLocation = value.getBoundingClientRect();
 
-console.log(project.offsetTop, "projectoffsetTop");
-console.log(project.offsetHeight, "offsetHeight");
-console.log(window.innerHeight, "innerHeight");
+   if (findLocation.y > window.scrollY && window.scrollY < findLocation.height) {
+      const getId = value.getAttribute("id");
+      menuItems[1].classList.remove("active");
 
-window.addEventListener("scroll", (e) => {
-   if (window.scrollY > findLocation.top && window.scrollY < findLocation.height) {
-      if (findLocation.top < window.innerHeight && findLocation.bottom >= 0) {
-         menuItems[1].classList.add("active");
-         console.log(window.scrollY);
-      }
-
-      return;
+      console.log(findLocation, "findLocation");
+      console.log(findLocation.y, "y");
+      console.log(window.scrollY, "scrollY");
+      console.log(findLocation.height, "height");
+      console.log(findLocation.top, "top");
+      console.log(findLocation.bottom, "bottom");
+      console.log(getId, "getId");
+   } else {
+      menuItems[1].classList.add("active");
    }
+};
 
-   menuItems[1].classList.remove("active");
+sections.forEach((section) => {
+   window.addEventListener("scroll", (e) => {
+      activeLink(section);
+   });
 });

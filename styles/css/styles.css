@@ -521,6 +521,7 @@
   height: 35rem;
   border-radius: 1rem;
   background: hsl(0deg, 0%, 90%);
+  border: 0.1rem solid hsl(212deg, 29%, 13%);
   box-shadow: 0 0 0.3rem 0.1rem rgba(19, 125, 195, 0.8);
 }
 .card .card-title {
