@@ -5,7 +5,7 @@
   padding: 1rem 2rem;
   border: none;
   border-radius: 3rem;
-  color: rgb(247, 248, 248);
+  color: hsl(180deg, 8%, 97%);
   transition: all 300ms ease-in-out;
 }
 #contacts .contact-content form #send-btn:hover, #home .left .cta .cta-btn:hover {
@@ -38,7 +38,7 @@
   }
 }
 .logo-container .logo .opening-tag {
-  margin-left: -1rem;
+  margin-left: -0.5rem;
 }
 .logo-container .logo .melvin-text {
   width: 8rem;
@@ -101,7 +101,7 @@
 }
 
 .nav-bar {
-  background: linear-gradient(45deg, hsl(212deg, 29%, 13%) 0%, hsl(204deg, 68%, 37%) 150%);
+  background: linear-gradient(45deg, hsl(212deg, 29%, 13%) 0%, hsl(204deg, 82%, 42%) 150%);
   position: absolute;
   top: 0;
   left: 0;
@@ -155,7 +155,7 @@
   bottom: -0.5rem;
   left: 0;
   width: 100%;
-  border-bottom: 0.3rem solid rgb(247, 248, 248);
+  border-bottom: 0.3rem solid hsl(180deg, 8%, 97%);
   transform: scale(0, 1);
   transform-origin: right;
   transition: transform 300ms ease-in-out;
@@ -171,7 +171,7 @@
 .nav-bar .menu .menu-item a {
   font-size: 2rem;
   text-decoration: none;
-  color: rgb(247, 248, 248);
+  color: hsl(180deg, 8%, 97%);
   font-weight: 400;
 }
 
@@ -271,7 +271,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  color: rgb(247, 248, 248);
+  color: hsl(180deg, 8%, 97%);
   width: 100%;
   padding: 2rem 2rem 0 2rem;
   min-height: 100vh;
@@ -612,7 +612,7 @@
 }
 .card .card-image .visit-btn .visit {
   text-decoration: none;
-  color: rgb(247, 248, 248);
+  color: hsl(180deg, 8%, 97%);
   position: relative;
 }
 .card .card-image .visit-btn .visit::before {
@@ -621,7 +621,7 @@
   bottom: -0.2rem;
   left: 0;
   width: 100%;
-  border-bottom: 0.2rem solid rgb(247, 248, 248);
+  border-bottom: 0.2rem solid hsl(180deg, 8%, 97%);
   transform: scale(0, 1);
   transform-origin: right;
   transition: transform 300ms ease-in-out;
@@ -656,7 +656,7 @@
   font-size: 1.1rem;
   padding: 0.5rem;
   border-radius: 0 0.5rem 0 0.5rem;
-  color: rgb(247, 248, 248);
+  color: hsl(180deg, 8%, 97%);
   background: hsl(204deg, 82%, 42%);
 }
 .card .card-tag span:hover {
@@ -739,7 +739,7 @@
   width: 100%;
   max-width: 144rem;
   padding: 2rem;
-  color: rgb(247, 248, 248);
+  color: hsl(180deg, 8%, 97%);
   position: relative;
   border-top: 0.5rem solid hsl(204deg, 82%, 42%);
 }
@@ -780,7 +780,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
 }
 #contacts .contact-content form h2 {
@@ -792,7 +792,7 @@
 #contacts .contact-content form .form-field label {
   display: block;
   width: 100%;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 #contacts .contact-content form .form-field input,
 #contacts .contact-content form .form-field textarea {
@@ -802,6 +802,11 @@
   border-radius: 0.5rem;
   outline: none;
   background: hsl(0deg, 0%, 90%);
+}
+#contacts .contact-content form .form-field .warning {
+  text-align: right;
+  font-size: 1.2rem;
+  color: hsl(0deg, 100%, 63%);
 }
 #contacts .contact-content form #send-btn {
   padding: 1rem 5rem;
@@ -865,7 +870,7 @@
 #contacts .contact-content .contact-social-container .address-container .phone a,
 #contacts .contact-content .contact-social-container .address-container .email a {
   text-decoration: none;
-  color: rgb(247, 248, 248);
+  color: hsl(180deg, 8%, 97%);
 }
 #contacts .contact-content .contact-social-container .social-media .social-media-text {
   font-size: 2rem;
@@ -888,7 +893,7 @@
   bottom: -0.5rem;
   left: 0;
   width: 100%;
-  border-bottom: 0.3rem solid rgb(247, 248, 248);
+  border-bottom: 0.3rem solid hsl(180deg, 8%, 97%);
   transform: scale(0, 1);
   transform-origin: right;
   transition: transform 300ms ease-in-out;
@@ -975,7 +980,7 @@
   padding: 1rem;
   border: none;
   border-radius: 50%;
-  background-color: rgb(247, 248, 248);
+  background-color: hsl(180deg, 8%, 97%);
   font-size: 2rem;
   color: hsl(212deg, 29%, 13%);
 }
@@ -1030,7 +1035,7 @@ body {
   font-size: 1.6rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
-  color: rgb(247, 248, 248);
+  color: hsl(180deg, 8%, 97%);
 }
 
 .container {

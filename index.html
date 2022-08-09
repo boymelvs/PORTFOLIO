@@ -504,23 +504,24 @@
             <section id="contacts" class="footer-content">
                <div class="contact-content">
                   <!-- action="https://formspree.io/f/xaykywrp" -->
-                  <form method="POST" id="contact-form">
+                  <form id="contact-form">
                      <h2>Lets Talk</h2>
                      <div class="form-field name-container">
                         <label for="first-name">Name</label>
-                        <input type="text" name="name" id="name" maxlength="50" />
-                        <div class="warning">Name is required</div>
+                        <input type="text" name="name" id="name" maxlength="32" />
+                        <div class="warning">Name is required. Must not be empty</div>
                      </div>
 
                      <div class="form-field email-container">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" maxlength="50" />
-                        <div class="warning">It</div>
+                        <input type="text" name="email" id="email" maxlength="32" />
+                        <div class="warning">Email is required. Must not be empty.</div>
                      </div>
 
                      <div class="form-field message-container">
                         <label for="message">Message</label>
-                        <textarea name="message" name="message" id="message" cols="30" rows="10" maxlength="500"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10" maxlength="200"></textarea>
+                        <div class="warning">Message must not be empty.</div>
                      </div>
 
                      <input type="submit" value="Send" id="send-btn" class="send-btn" />

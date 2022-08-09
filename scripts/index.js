@@ -94,13 +94,59 @@ slideBtns.forEach((btn) => {
 /* form validation */
 const contactForm = document.querySelector("#contact-form");
 
+const isRequired = (value) => {
+   return value ? true : false;
+};
+
+const checkName = (item) => {
+   let name = item.name.value.trim();
+   let maxLength = name.length;
+
+   if (isRequired(name) && maxLength <= 30) {
+      return true;
+   }
+
+   return false;
+};
+
+const checkEmail = (item) => {
+   let email = item.email.value.trim();
+   let maxLength = email.length;
+
+   const emailFormat = /[^@ \t\r\n]+@[^@ \t\r\n]+\.(\w{2,3})+$/;
+   const isEmailCorrect = emailFormat.test(email);
+
+   if (isRequired(email) && maxLength <= 30 && isEmailCorrect) {
+      return true;
+   }
+
+   return false;
+};
+
+const checkMessage = (item) => {
+   let message = item.message.value.trim();
+   let maxLength = message.length;
+
+   if (isRequired(message) && maxLength <= 200) {
+      return true;
+   }
+
+   return false;
+};
+
 contactForm.addEventListener("submit", (e) => {
    e.preventDefault();
-   let name = e.target.name.value;
-   let email = e.target.email.value;
-   let message = e.target.message.value;
+   let value = e.target;
 
-   console.log(name);
-   console.log(email);
-   console.log(message);
+   let isNameValid = checkName(value);
+   let isEmailValid = checkEmail(value);
+   let isMessageValid = checkMessage(value);
+
+   if (isNameValid && isEmailValid && isMessageValid) {
+      value.action = "https://formspree.io/f/xaykywrp";
+      value.method = "POST";
+
+      console.log(value.action, "action");
+      console.log(value.method, "method");
+   }
 });
