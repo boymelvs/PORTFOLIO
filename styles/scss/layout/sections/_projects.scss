@@ -7,6 +7,7 @@
    h2 {
       font-size: 5rem;
       text-align: center;
+      width: 100%;
 
       @media (min-width: 980px) {
          text-align: left;
@@ -16,6 +17,7 @@
    .projects-content {
       padding: 3rem;
       border-top: 0.5rem solid $navy-blue;
+      width: 100%;
 
       .projects-subtitle {
          @include flexBox(column, center, center, 0);

@@ -19,6 +19,19 @@
       position: absolute;
       top: 10%;
       transition: all 1s ease-in-out;
+      transform: translateX(350%);
+
+      &:nth-child(1) {
+         transform: translateX(0%);
+      }
+
+      &:nth-child(2) {
+         transform: translateX(115%);
+      }
+
+      &:nth-child(3) {
+         transform: translateX(230%);
+      }
 
       &.card-last {
          background: transparent;
@@ -56,11 +69,13 @@
       &.btn-prev {
          top: 45%;
          left: 0;
+         z-index: 4;
       }
 
       &.btn-next {
          top: 45%;
          right: 0;
+         z-index: 4;
       }
    }
 }

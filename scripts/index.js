@@ -5,13 +5,21 @@ const header = document.querySelector(".my-header");
 const sections = document.querySelectorAll("section");
 const menuItems = document.querySelectorAll(".menu-item");
 const footerMenuItems = document.querySelectorAll(".footer-item");
+const getBurger = document.querySelector("#burger-checkbox");
+
+/* when menu item click close dropdown menu */
+menuItems.forEach((item) => {
+   item.addEventListener("click", () => {
+      getBurger.checked = false;
+   });
+});
 
 /* function that add/remove active class in menu items */
 const addRemoveClasses = (value, id) => {
    value.classList.contains(`${id}`) ? value.classList.add("active") : value.classList.remove("active");
 };
 
-/* function that find the location of eact section tag */
+/* function that find the location of each section tag */
 const activeLink = (value) => {
    const findTop = value.offsetTop;
    const findHeight = value.clientHeight;
@@ -37,7 +45,7 @@ const activeLink = (value) => {
    }
 };
 
-/* event listener for each section tag and add/remove background for header */
+/* event listener for each section tag and window */
 window.addEventListener("scroll", (e) => {
    window.scrollY > 50 ? header.classList.add("active") : header.classList.remove("active");
 
@@ -58,7 +66,6 @@ let maxSlide = slides.length - showCard;
 let getScreenWidth = () => {
    screenWidth = project.getBoundingClientRect().width;
    showCard = screenWidth < 768 ? 1 : 2;
-   console.log(screenWidth);
 };
 
 // loop through slides and set each slides translateX property to index * 100%
