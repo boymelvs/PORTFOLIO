@@ -1,7 +1,8 @@
 #projects {
+   @include flexBox(column, center, center, 0);
    background: $whisper;
    color: $black-pearl;
-   padding: 2rem;
+   padding: 2rem 2rem 0 2rem;
 
    h2 {
       font-size: 5rem;
@@ -13,7 +14,7 @@
    }
 
    .projects-content {
-      padding: 3rem 0 5rem 0;
+      padding: 3rem;
       border-top: 0.5rem solid $navy-blue;
 
       .projects-subtitle {
@@ -42,44 +43,6 @@
          @media (min-width: 660px) {
             @include flexBox(row, center, space-evenly, 2rem);
             flex-wrap: wrap;
-         }
-      }
-   }
-
-   .see-more-projects {
-      font-size: 2rem;
-      font-weight: $font-weight-600;
-      letter-spacing: 0.2rem;
-      text-align: center;
-      padding-bottom: 5rem;
-
-      a {
-         text-decoration: none;
-         color: $black-pearl;
-
-         span {
-            position: relative;
-
-            &::before {
-               content: "";
-               position: absolute;
-               bottom: -0.5rem;
-               left: 0;
-               width: 100%;
-               border-bottom: 0.3rem solid $navy-blue;
-               transform: scale(0, 1);
-               transform-origin: right;
-               transition: transform 300ms ease-in-out;
-            }
-
-            &:hover {
-               cursor: pointer;
-            }
-
-            &:hover::before {
-               transform: scale(1, 1);
-               transform-origin: left 1rem;
-            }
          }
       }
    }

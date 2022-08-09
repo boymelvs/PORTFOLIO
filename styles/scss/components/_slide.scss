@@ -1,0 +1,66 @@
+.slider {
+   @include flexBox(row, center, center, 0);
+   margin: 0 auto;
+   width: 30rem;
+   height: 40rem;
+   position: relative;
+   overflow: hidden;
+
+   @media (min-width: 768px) {
+      @include flexBox(row, center, start, 0);
+      width: 65rem;
+   }
+
+   @media (min-width: 1024px) {
+      width: 98rem;
+   }
+
+   & .card-slide {
+      position: absolute;
+      top: 10%;
+      transition: all 1s ease-in-out;
+
+      &.card-last {
+         background: transparent;
+      }
+
+      @media (min-width: 768px) {
+         left: 3.5%;
+      }
+
+      @media (min-width: 1024px) {
+         left: 3%;
+      }
+   }
+
+   & .btn {
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 50%;
+      background-color: $azure;
+      font-size: 2rem;
+      color: $black-pearl;
+
+      &:hover {
+         cursor: pointer;
+         opacity: 0.8;
+      }
+
+      &:active {
+         transform: scale(1.1);
+      }
+
+      &.btn-prev {
+         top: 45%;
+         left: 0;
+      }
+
+      &.btn-next {
+         top: 45%;
+         right: 0;
+      }
+   }
+}

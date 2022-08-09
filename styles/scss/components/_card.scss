@@ -69,6 +69,10 @@
             transform: scale(1, 1);
             transform-origin: left 1rem;
          }
+
+         &.seemore {
+            visibility: visible;
+         }
       }
 
       &:hover > img {
