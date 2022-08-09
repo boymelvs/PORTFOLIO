@@ -1,23 +1,77 @@
 #home {
+   @include flexBox(column, center, center, 2rem);
    color: $azure;
    width: 100%;
-   padding: 2rem;
+   padding: 2rem 2rem 0 2rem;
+   min-height: 100vh;
 
    @media (min-width: 768px) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
+      padding-top: 4rem 2rem 0 2rem;
+   }
+
+   @media (min-width: 1201px) {
+      padding: 4rem 6rem 0 6rem;
    }
 
    & .left {
-      @include flexBox(column, center, center, 1rem);
+      @include flexBox(column, center, center, 2rem);
       text-align: center;
 
       @media (min-width: 768px) {
          grid-column: 1 / span 6;
          text-align: left;
+         width: 100%;
+      }
 
-         & .greeting {
+      & .greeting {
+         font-size: 3rem;
+
+         @media (min-width: 768px) {
+            width: 100%;
             font-size: 5rem;
+         }
+      }
+
+      & .career {
+         font-size: 1.5rem;
+
+         @media (min-width: 768px) {
+            width: 100%;
+            font-size: 3rem;
+         }
+      }
+
+      & .cta {
+         @include flexBox(row, center, center, 2rem);
+         width: 100%;
+
+         @media (min-width: 768px) {
+            @include flexBox(row, center, start, 3rem);
+         }
+
+         & .cta-btn {
+            @extend %button-style;
+            border: 0.2rem solid $navy-blue;
+
+            @media (min-width: 768px) {
+               padding: 1.5rem 2rem;
+               font-size: 2rem;
+            }
+
+            &:hover {
+               border: 0.2rem solid $whisper;
+               color: $black-pearl;
+            }
+         }
+
+         & .contact-btn {
+            background: transparent;
+         }
+
+         & .work-btn {
+            background: $navy-blue;
          }
       }
    }
@@ -28,6 +82,7 @@
       }
 
       & img {
+         margin-bottom: -0.5rem;
          width: 100%;
       }
    }

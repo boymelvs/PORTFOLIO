@@ -3,6 +3,10 @@
    color: $black-pearl;
    padding: 5rem 2rem 2rem 2rem;
 
+   @media (min-width: 1201px) {
+      padding: 5rem 6rem 2rem 6rem;
+   }
+
    & h2 {
       font-size: 5rem;
       text-align: center;

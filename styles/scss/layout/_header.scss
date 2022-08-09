@@ -20,6 +20,10 @@
       background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
       box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
    }
+
+   @media (min-width: 1201px) {
+      padding: 2rem 6rem;
+   }
 }
 
 .nav-bar {

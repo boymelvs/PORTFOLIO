@@ -11,6 +11,7 @@
 html {
    font-size: $font-size-10;
    scroll-behavior: smooth;
+   transition: all 500ms ease-in-out;
 }
 
 body {
@@ -26,4 +27,9 @@ body {
    background: linear-gradient(45deg, $black-pearl 0%, $navy-blue 150%);
    max-width: 144rem;
    margin: 0 auto;
+}
+
+::selection {
+   color: none;
+   background: none;
 }

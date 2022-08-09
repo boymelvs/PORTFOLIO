@@ -4,7 +4,11 @@
    color: $black-pearl;
    padding: 2rem 2rem 0 2rem;
 
-   h2 {
+   @media (min-width: 1201px) {
+      padding: 2rem 6rem 0 6rem;
+   }
+
+   & h2 {
       font-size: 5rem;
       text-align: center;
       width: 100%;
@@ -14,12 +18,12 @@
       }
    }
 
-   .projects-content {
-      padding: 3rem;
+   & .projects-content {
+      padding: 3rem 0 3rem 0;
       border-top: 0.5rem solid $navy-blue;
       width: 100%;
 
-      .projects-subtitle {
+      & .projects-subtitle {
          @include flexBox(column, center, center, 0);
          font-size: 2rem;
          text-align: center;
@@ -32,13 +36,13 @@
             text-align: left;
          }
 
-         .bottom {
+         & .bottom {
             padding-bottom: 0.5rem;
             border-bottom: 0.15rem solid $black-pearl;
          }
       }
 
-      .projects-list {
+      & .projects-list {
          @include flexBox(column, center, center, 2rem);
          margin-top: 5rem;
 

@@ -1,12 +1,14 @@
 @import "../layout/sections/home";
 
+@import "../layout/sections/about";
+
 @import "../layout/sections/projects";
 
 @import "../components/card";
 
 @import "../layout/sections/skills";
 
-@import "../layout/sections/about";
+@import "./sections/contact";
 
 .my-main {
    width: 100%;

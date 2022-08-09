@@ -1,0 +1,162 @@
+#contacts {
+   @include flexBox(column, center, center, 3rem);
+   width: 100%;
+   max-width: 144rem;
+   padding: 2rem;
+   color: $azure;
+   position: relative;
+   border-top: 0.5rem solid $navy-blue;
+
+   @media (min-width: 768px) {
+      padding: 3rem 2rem;
+   }
+
+   @media (min-width: 992px) {
+      padding: 3rem 6rem;
+   }
+
+   & .contact-content {
+      @include flexBox(column, start, start, 2rem);
+      width: 100%;
+
+      @media (min-width: 768px) {
+         @include flexBox(row, none, space-between, 4rem);
+      }
+
+      @media (min-width: 992px) {
+         gap: 10rem;
+      }
+
+      & form {
+         @include flexBox(column, center, center, 2rem);
+         width: 100%;
+
+         & h2 {
+            font-size: 5rem;
+         }
+
+         & .form-field {
+            width: 100%;
+
+            label {
+               display: block;
+               width: 100%;
+               padding: 1rem 0;
+            }
+
+            & input,
+            textarea {
+               width: 100%;
+               padding: 1rem;
+               border: none;
+               border-radius: 0.5rem;
+               outline: none;
+               background: $whisper;
+            }
+         }
+
+         & #send-btn {
+            @extend %button-style;
+            padding: 1rem 5rem;
+            background: $navy-blue;
+            font-size: 2rem;
+
+            @media (min-width: 768px) {
+               padding: 1rem 6rem;
+            }
+
+            &:hover {
+               color: $black-pearl;
+            }
+         }
+      }
+
+      & .contact-social-container {
+         @include flexBox(column, start, center, 2rem);
+         width: 100%;
+
+         & .address-container {
+            @include flexBox(column, start, center, 1rem);
+            margin-bottom: 2rem;
+            width: 100%;
+
+            @media (min-width: 768px) {
+               gap: 1rem;
+            }
+
+            & .contact-text {
+               font-size: 5rem;
+               text-align: center;
+               width: 100%;
+               padding-bottom: 3rem;
+            }
+
+            & .address-text {
+               font-size: 2rem;
+               font-weight: $font-weight-600;
+            }
+
+            & img {
+               width: 2.5rem;
+               height: 2.5rem;
+            }
+
+            & .location,
+            .phone,
+            .email {
+               @include flexBox(row, center, center, 1rem);
+
+               & a {
+                  text-decoration: none;
+                  color: $azure;
+               }
+            }
+         }
+
+         .social-media {
+            & .social-media-text {
+               font-size: 2rem;
+            }
+
+            .social-media-icon {
+               @include flexBox(row, center, start, 2rem);
+               margin-top: 2rem;
+
+               & a {
+                  text-decoration: none;
+                  position: relative;
+
+                  &::before {
+                     content: "";
+                     position: absolute;
+                     bottom: -0.5rem;
+                     left: 0;
+                     width: 100%;
+                     border-bottom: 0.3rem solid $azure;
+                     transform: scale(0, 1);
+                     transform-origin: right;
+                     transition: transform 300ms ease-in-out;
+                  }
+
+                  & img {
+                     width: 2.5rem;
+                     height: 2.5rem;
+                     filter: brightness(0) invert(1);
+                     transition: filter 300ms ease-in-out;
+
+                     &:hover {
+                        cursor: pointer;
+                        filter: unset;
+                     }
+                  }
+
+                  &:hover::before {
+                     transform: scale(1, 1);
+                     transform-origin: left;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

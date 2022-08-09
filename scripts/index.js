@@ -78,6 +78,7 @@ const activeSlide = () => {
 };
 activeSlide();
 
+/* carousel buttons */
 slideBtns.forEach((btn) => {
    btn.addEventListener("click", (e) => {
       if (btn.classList.contains("btn-next")) {
@@ -88,4 +89,18 @@ slideBtns.forEach((btn) => {
          activeSlide();
       }
    });
+});
+
+/* form validation */
+const contactForm = document.querySelector("#contact-form");
+
+contactForm.addEventListener("submit", (e) => {
+   e.preventDefault();
+   let name = e.target.name.value;
+   let email = e.target.email.value;
+   let message = e.target.message.value;
+
+   console.log(name);
+   console.log(email);
+   console.log(message);
 });

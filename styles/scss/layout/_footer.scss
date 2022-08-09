@@ -1,120 +1,14 @@
-footer {
-   @include flexBox(column, center, center, 3rem);
-   width: 100%;
-   max-width: 144rem;
+.copyright {
+   font-size: 1rem;
    padding: 2rem;
-   color: $azure;
-   position: relative;
-   border-top: 0.5rem solid $navy-blue;
+   text-align: center;
 
    @media (min-width: 768px) {
-      padding: 3rem 2rem;
+      margin-top: 0;
    }
 
-   @media (min-width: 992px) {
-      padding: 3rem 6rem;
-   }
-
-   .footer-content {
-      @include flexBox(column, start, start, 2rem);
-      width: 100%;
-
-      @media (min-width: 550px) {
-         @include flexBox(row, start, space-between, 0);
-      }
-
-      .contact-social-container {
-         @include flexBox(column, start, center, 2rem);
-         width: 100%;
-
-         @media (min-width: 425px) {
-            @include flexBox(row, start, space-between, 2rem);
-         }
-
-         .footer-contact {
-            @include flexBox(column, start, center, 1rem);
-            font-size: 1.2rem;
-
-            @media (min-width: 768px) {
-               gap: 1rem;
-               font-size: 1.4rem;
-            }
-
-            .contacts {
-               font-size: 1.6rem;
-            }
-
-            img {
-               width: 2.5rem;
-               height: 2.5rem;
-            }
-
-            .phone {
-               @include flexBox(row, center, center, 1rem);
-            }
-
-            .email {
-               @include flexBox(row, center, center, 1rem);
-            }
-         }
-
-         .social-media {
-            font-size: 1.6rem;
-
-            .social-media-icon {
-               @include flexBox(row, center, end, 2rem);
-               margin-top: 1rem;
-
-               a {
-                  text-decoration: none;
-                  position: relative;
-
-                  &::before {
-                     content: "";
-                     position: absolute;
-                     bottom: -0.5rem;
-                     left: 0;
-                     width: 100%;
-                     border-bottom: 0.3rem solid $azure;
-                     transform: scale(0, 1);
-                     transform-origin: right;
-                     transition: transform 300ms ease-in-out;
-                  }
-
-                  img {
-                     width: 2.5rem;
-                     height: 2.5rem;
-                     filter: brightness(0) invert(1);
-                     transition: filter 300ms ease-in-out;
-
-                     &:hover {
-                        cursor: pointer;
-                        filter: unset;
-                     }
-                  }
-
-                  &:hover::before {
-                     transform: scale(1, 1);
-                     transform-origin: left;
-                  }
-               }
-            }
-         }
-      }
-   }
-
-   .copyright {
-      font-size: 1rem;
-      margin-top: 3rem;
-      text-align: center;
-
-      @media (min-width: 768px) {
-         margin-top: 0;
-      }
-
-      img {
-         width: 1rem;
-         height: 1rem;
-      }
+   & img {
+      width: 1rem;
+      height: 1rem;
    }
 }

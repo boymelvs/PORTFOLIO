@@ -94,11 +94,14 @@
 
       span {
          font-size: 1.1rem;
-         font-weight: $font-weight-300;
          padding: 0.5rem;
-         border-radius: 2rem;
+         border-radius: 0 0.5rem 0 0.5rem;
          color: $azure;
          background: $navy-blue;
+
+         &:hover {
+            background: $black-pearl;
+         }
       }
    }
 }
