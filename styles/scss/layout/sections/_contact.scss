@@ -35,7 +35,7 @@
             font-size: 5rem;
          }
 
-         & .form-field {
+         & .field-container {
             width: 100%;
 
             label {
@@ -52,14 +52,18 @@
                border-radius: 0.5rem;
                outline: none;
                background: $whisper;
+
+               &::placeholder {
+                  color: $whisper-light;
+               }
             }
 
             & .warning {
                visibility: hidden;
-               text-align: right;
+               text-align: left;
                font-size: 1.2rem;
                color: $light-red;
-               height: 1.5rem;
+               height: 1.3rem;
 
                &.active {
                   visibility: visible;
@@ -79,6 +83,10 @@
 
             &:hover {
                color: $black-pearl;
+            }
+
+            &:active {
+               background: $navy-blue;
             }
          }
       }

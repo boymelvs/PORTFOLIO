@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@300;400;500;600&display=swap");
+/* font */
+/* bg */
+/* font */
 /* fonts */
 /* 10px */
 #contacts .contact-content form #send-btn, #home .left .cta .cta-btn {
@@ -20,12 +23,14 @@
   justify-content: center;
   gap: 0;
   display: none;
+  position: fixed;
+  top: 0;
   padding: 2rem;
   max-width: 144rem;
   min-height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
-  visibility: hidden;
+  animation: fadeOut 500ms ease-in-out forwards;
 }
 #thanks-modal .thanks-message {
   display: flex;
@@ -70,12 +75,13 @@
 }
 
 #thanks-modal.active {
-  position: fixed;
-  top: 0;
   z-index: 100;
-  visibility: visible;
   animation: fadeIn 500ms ease-in-out forwards;
+}
+
+#thanks-modal.show {
   display: flex;
+  visibility: visible;
 }
 
 @keyframes fadeIn {
@@ -86,6 +92,17 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(6rem);
   }
 }
 .logo-container {
@@ -945,16 +962,16 @@
 #contacts .contact-content form h2 {
   font-size: 5rem;
 }
-#contacts .contact-content form .form-field {
+#contacts .contact-content form .field-container {
   width: 100%;
 }
-#contacts .contact-content form .form-field label {
+#contacts .contact-content form .field-container label {
   display: block;
   width: 100%;
   padding: 0.5rem 0;
 }
-#contacts .contact-content form .form-field input,
-#contacts .contact-content form .form-field textarea {
+#contacts .contact-content form .field-container input,
+#contacts .contact-content form .field-container textarea {
   width: 100%;
   padding: 1rem;
   border: none;
@@ -962,14 +979,18 @@
   outline: none;
   background: hsl(0deg, 0%, 90%);
 }
-#contacts .contact-content form .form-field .warning {
+#contacts .contact-content form .field-container input::placeholder,
+#contacts .contact-content form .field-container textarea::placeholder {
+  color: hsl(0deg, 0%, 70%);
+}
+#contacts .contact-content form .field-container .warning {
   visibility: hidden;
-  text-align: right;
+  text-align: left;
   font-size: 1.2rem;
   color: hsl(0deg, 100%, 63%);
-  height: 1.5rem;
+  height: 1.3rem;
 }
-#contacts .contact-content form .form-field .warning.active {
+#contacts .contact-content form .field-container .warning.active {
   visibility: visible;
 }
 #contacts .contact-content form #send-btn {
@@ -984,6 +1005,9 @@
 }
 #contacts .contact-content form #send-btn:hover {
   color: hsl(212deg, 29%, 13%);
+}
+#contacts .contact-content form #send-btn:active {
+  background: hsl(204deg, 82%, 42%);
 }
 #contacts .contact-content .contact-social-container {
   display: flex;

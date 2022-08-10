@@ -66,7 +66,7 @@ let getScreenWidth = () => {
    showCard = screenWidth < 768 ? 1 : 2;
 };
 
-// loop through slides and set each slides translateX property to index * 100%
+// loop through slides and set each slides translateX property to index * 115%
 const activeSlide = () => {
    getScreenWidth();
 
@@ -90,7 +90,7 @@ slideBtns.forEach((btn) => {
 });
 
 /* ================= FORMS SUBMISSION ================= */
-/* form validation */
+/* form variables */
 const contactForm = document.querySelector("#contact-form");
 const getModal = document.querySelector("#thanks-modal");
 const stopScroll = document.querySelector("#stop-scroll");
@@ -100,24 +100,25 @@ const getUrl = "https://formspree.io/f/xaykywrp";
 const method = "post";
 const getWarnings = document.querySelectorAll(".warning");
 
+/* form validation */
 const isRequired = (value) => {
    return value ? true : false;
 };
 
-const showWarning = (element) => {
-   element.classList.contains("active") ? element.classList.remove("active") : element.classList.add("active");
+const showWarning = (element, isAdded) => {
+   isAdded === "remove" ? element.classList.remove("active") : element.classList.add("active");
 };
 
 const checkName = (item) => {
-   let name = item.name.value.trim();
+   let name = item.name.value;
    let maxLength = name.length;
    let element = item.name;
 
-   if (isRequired(name) && maxLength <= 30) {
+   if (isRequired(name) && maxLength >= 5 && maxLength <= 30) {
       return true;
    }
 
-   showWarning(element.nextElementSibling);
+   showWarning(element.nextElementSibling, "add");
    return false;
 };
 
@@ -133,7 +134,7 @@ const checkEmail = (item) => {
       return true;
    }
 
-   showWarning(element.nextElementSibling);
+   showWarning(element.nextElementSibling, "add");
    return false;
 };
 
@@ -142,24 +143,24 @@ const checkSubject = (item) => {
    let maxLength = name.length;
    let element = item.subject;
 
-   console.log(name, "subject");
-
-   if (isRequired(name) && maxLength <= 30) {
+   if (isRequired(name) && maxLength >= 5 && maxLength <= 30) {
       return true;
    }
 
-   showWarning(element.nextElementSibling);
+   showWarning(element.nextElementSibling, "add");
    return false;
 };
 
 const checkMessage = (item) => {
    let message = item.message.value.trim();
    let maxLength = message.length;
+   let element = item.message;
 
-   if (isRequired(message) && maxLength <= 200) {
+   if (isRequired(message) && maxLength >= 5 && maxLength <= 200) {
       return true;
    }
 
+   showWarning(element.nextElementSibling, "add");
    return false;
 };
 
@@ -171,12 +172,10 @@ const handleSubmit = async (value) => {
       const datas = await res.json();
 
       if (res.ok) {
-         getModal.classList.add("active");
+         getModal.setAttribute("class", "active show");
          stopScroll.classList.add("active");
          contactForm.reset();
       }
-
-      console.log(datas, "datas");
    } catch (error) {
       console.log(error);
    }
@@ -192,13 +191,58 @@ contactForm.addEventListener("submit", (e) => {
    let isMessageValid = checkMessage(value);
 
    if (isNameValid && isEmailValid && isMessageValid && isSubjectValid) {
-      // handleSubmit(value);
-      console.log("submit");
-      getModal.classList.add("active");
+      handleSubmit(value);
    }
 });
 
 closeModal.addEventListener("click", (e) => {
+   setTimeout(() => {
+      getModal.classList.remove("show");
+   }, 300);
+
    getModal.classList.remove("active");
    stopScroll.classList.remove("active");
+});
+
+/* ================= REAL TIME FORM VALIDATION ================= */
+let timeOut;
+
+contactForm.addEventListener("input", (e) => {
+   e.preventDefault();
+   let getId = e.target.id;
+
+   if (timeOut) {
+      clearTimeout(timeOut);
+   }
+
+   timeOut = setTimeout(() => {
+      switch (getId) {
+         case "name":
+            if (checkName(contactForm)) {
+               let element = contactForm.name;
+               showWarning(element.nextElementSibling, "remove");
+            }
+            break;
+
+         case "email":
+            if (checkEmail(contactForm)) {
+               let element = contactForm.email;
+               showWarning(element.nextElementSibling, "remove");
+            }
+            break;
+
+         case "subject":
+            if (checkSubject(contactForm)) {
+               let element = contactForm.subject;
+               showWarning(element.nextElementSibling, "remove");
+            }
+            break;
+
+         case "message":
+            if (checkMessage(contactForm)) {
+               let element = contactForm.message;
+               showWarning(element.nextElementSibling, "remove");
+            }
+      }
+   }, 500);
 });

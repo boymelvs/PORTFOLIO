@@ -1,13 +1,14 @@
 #thanks-modal {
    @include flexBox(row, center, center, 0);
    display: none;
-
+   position: fixed;
+   top: 0;
    padding: 2rem;
    max-width: 144rem;
    min-height: 100vh;
    width: 100%;
    background: rgba(0, 0, 0, 0.2);
-   visibility: hidden;
+   animation: fadeOut 500ms ease-in-out forwards;
 
    & .thanks-message {
       @include flexBox(column, center, center, 2rem);
@@ -51,12 +52,13 @@
 }
 
 #thanks-modal.active {
-   position: fixed;
-   top: 0;
    z-index: 100;
-   visibility: visible;
    animation: fadeIn 500ms ease-in-out forwards;
+}
+
+#thanks-modal.show {
    display: flex;
+   visibility: visible;
 }
 
 @keyframes fadeIn {
@@ -67,5 +69,17 @@
    100% {
       opacity: 1;
       transform: translateY(0);
+   }
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   100% {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(6rem);
    }
 }
