@@ -80,9 +80,16 @@ activeSlide();
 slideBtns.forEach((btn) => {
    btn.addEventListener("click", (e) => {
       if (btn.classList.contains("btn-next")) {
-         currentSlide = currentSlide >= maxSlide ? maxSlide : currentSlide + showCard;
+         if (currentSlide == 12 && showCard === 2) {
+            currentSlide == 12;
+            return;
+         }
+
+         currentSlide = currentSlide > maxSlide ? currentSlide : currentSlide + showCard;
          activeSlide();
-      } else {
+      }
+
+      if (btn.classList.contains("btn-prev")) {
          currentSlide = currentSlide <= 0 ? 0 : currentSlide - showCard;
          activeSlide();
       }
@@ -181,68 +188,74 @@ const handleSubmit = async (value) => {
    }
 };
 
-contactForm.addEventListener("submit", (e) => {
-   e.preventDefault();
-   let value = e.target;
+contactForm === null
+   ? ""
+   : contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let value = e.target;
 
-   let isNameValid = checkName(value);
-   let isEmailValid = checkEmail(value);
-   let isSubjectValid = checkSubject(value);
-   let isMessageValid = checkMessage(value);
+        let isNameValid = checkName(value);
+        let isEmailValid = checkEmail(value);
+        let isSubjectValid = checkSubject(value);
+        let isMessageValid = checkMessage(value);
 
-   if (isNameValid && isEmailValid && isMessageValid && isSubjectValid) {
-      handleSubmit(value);
-   }
-});
+        if (isNameValid && isEmailValid && isMessageValid && isSubjectValid) {
+           handleSubmit(value);
+        }
+     });
 
-closeModal.addEventListener("click", (e) => {
-   setTimeout(() => {
-      getModal.classList.remove("show");
-   }, 300);
+closeModal === null
+   ? ""
+   : closeModal.addEventListener("click", (e) => {
+        setTimeout(() => {
+           getModal.classList.remove("show");
+        }, 300);
 
-   getModal.classList.remove("active");
-   stopScroll.classList.remove("active");
-});
+        getModal.classList.remove("active");
+        stopScroll.classList.remove("active");
+     });
 
 /* ================= REAL TIME FORM VALIDATION ================= */
 let timeOut;
 
-contactForm.addEventListener("input", (e) => {
-   e.preventDefault();
-   let getId = e.target.id;
+contactForm === null
+   ? ""
+   : contactForm.addEventListener("input", (e) => {
+        e.preventDefault();
+        let getId = e.target.id;
 
-   if (timeOut) {
-      clearTimeout(timeOut);
-   }
+        if (timeOut) {
+           clearTimeout(timeOut);
+        }
 
-   timeOut = setTimeout(() => {
-      switch (getId) {
-         case "name":
-            if (checkName(contactForm)) {
-               let element = contactForm.name;
-               showWarning(element.nextElementSibling, "remove");
-            }
-            break;
+        timeOut = setTimeout(() => {
+           switch (getId) {
+              case "name":
+                 if (checkName(contactForm)) {
+                    let element = contactForm.name;
+                    showWarning(element.nextElementSibling, "remove");
+                 }
+                 break;
 
-         case "email":
-            if (checkEmail(contactForm)) {
-               let element = contactForm.email;
-               showWarning(element.nextElementSibling, "remove");
-            }
-            break;
+              case "email":
+                 if (checkEmail(contactForm)) {
+                    let element = contactForm.email;
+                    showWarning(element.nextElementSibling, "remove");
+                 }
+                 break;
 
-         case "subject":
-            if (checkSubject(contactForm)) {
-               let element = contactForm.subject;
-               showWarning(element.nextElementSibling, "remove");
-            }
-            break;
+              case "subject":
+                 if (checkSubject(contactForm)) {
+                    let element = contactForm.subject;
+                    showWarning(element.nextElementSibling, "remove");
+                 }
+                 break;
 
-         case "message":
-            if (checkMessage(contactForm)) {
-               let element = contactForm.message;
-               showWarning(element.nextElementSibling, "remove");
-            }
-      }
-   }, 500);
-});
+              case "message":
+                 if (checkMessage(contactForm)) {
+                    let element = contactForm.message;
+                    showWarning(element.nextElementSibling, "remove");
+                 }
+           }
+        }, 500);
+     });
