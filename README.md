@@ -3,9 +3,9 @@
 ### A Full Stack Developer from the Philippines 👨‍💻
 
 -  🌱 I’m currently enrolled at **KODEGOPH Bootcamp**.
--  👀 Interested to learn **Node js**, **React js**.
+-  👀 Interested to learn more in **Node js**, **React js**.
 -  📫 How to reach me? **melvin.enmocino@gmail.com**
--  Live Site: [Portfolio](https://boymelvs.github.io/PORTFOLIO)
+-  Live Site: **[Portfolio](https://boymelvs.github.io/PORTFOLIO)**.
 
 ### Connect with me:
 
