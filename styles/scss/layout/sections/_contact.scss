@@ -55,9 +55,15 @@
             }
 
             & .warning {
+               visibility: hidden;
                text-align: right;
                font-size: 1.2rem;
                color: $light-red;
+               height: 1.5rem;
+
+               &.active {
+                  visibility: visible;
+               }
             }
          }
 

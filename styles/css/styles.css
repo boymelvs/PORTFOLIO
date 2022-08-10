@@ -19,14 +19,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  position: fixed;
-  top: 0;
+  display: none;
   padding: 2rem;
   max-width: 144rem;
   min-height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  animation: fadeOut 500ms ease-in-out forwards;
+  background: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
 }
 #thanks-modal .thanks-message {
   display: flex;
@@ -66,36 +65,27 @@
 }
 
 /* ================= all about animation ================= */
-#stopScroll.active {
+#stop-scroll.active {
   overflow: hidden; /* stop body to scroll while modal is open */
 }
 
 #thanks-modal.active {
+  position: fixed;
+  top: 0;
   z-index: 100;
   visibility: visible;
   animation: fadeIn 500ms ease-in-out forwards;
+  display: flex;
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(6rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
     transform: translateY(-6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .logo-container {
@@ -973,9 +963,14 @@
   background: hsl(0deg, 0%, 90%);
 }
 #contacts .contact-content form .form-field .warning {
+  visibility: hidden;
   text-align: right;
   font-size: 1.2rem;
   color: hsl(0deg, 100%, 63%);
+  height: 1.5rem;
+}
+#contacts .contact-content form .form-field .warning.active {
+  visibility: visible;
 }
 #contacts .contact-content form #send-btn {
   padding: 1rem 5rem;

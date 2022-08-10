@@ -89,28 +89,42 @@ slideBtns.forEach((btn) => {
    });
 });
 
-/* ================= FORMS ================= */
+/* ================= FORMS SUBMISSION ================= */
 /* form validation */
 const contactForm = document.querySelector("#contact-form");
+const getModal = document.querySelector("#thanks-modal");
+const stopScroll = document.querySelector("#stop-scroll");
+const closeModal = document.querySelector(".close-modal");
+const getUrl = "https://formspree.io/f/xaykywrp";
+// const getUrl = "https://getform.io/f/09fc1c84-417f-4318-9853-4c0d232a6e51";
+const method = "post";
+const getWarnings = document.querySelectorAll(".warning");
 
 const isRequired = (value) => {
    return value ? true : false;
 };
 
+const showWarning = (element) => {
+   element.classList.contains("active") ? element.classList.remove("active") : element.classList.add("active");
+};
+
 const checkName = (item) => {
    let name = item.name.value.trim();
    let maxLength = name.length;
+   let element = item.name;
 
    if (isRequired(name) && maxLength <= 30) {
       return true;
    }
 
+   showWarning(element.nextElementSibling);
    return false;
 };
 
 const checkEmail = (item) => {
    let email = item.email.value.trim();
    let maxLength = email.length;
+   let element = item.email;
 
    const emailFormat = /[^@ \t\r\n]+@[^@ \t\r\n]+\.(\w{2,3})+$/;
    const isEmailCorrect = emailFormat.test(email);
@@ -119,17 +133,22 @@ const checkEmail = (item) => {
       return true;
    }
 
+   showWarning(element.nextElementSibling);
    return false;
 };
 
 const checkSubject = (item) => {
-   let name = item.name.value.trim();
+   let name = item.subject.value.trim();
    let maxLength = name.length;
+   let element = item.subject;
+
+   console.log(name, "subject");
 
    if (isRequired(name) && maxLength <= 30) {
       return true;
    }
 
+   showWarning(element.nextElementSibling);
    return false;
 };
 
@@ -144,16 +163,18 @@ const checkMessage = (item) => {
    return false;
 };
 
-const getUrl = "https://formspree.io/f/xaykywrp";
-const method = "post";
-
 const handleSubmit = async (value) => {
    let data = new FormData(value);
 
    try {
       const res = await fetch(getUrl, { method: method, body: data, headers: { Accept: "application/json" } });
-
       const datas = await res.json();
+
+      if (res.ok) {
+         getModal.classList.add("active");
+         stopScroll.classList.add("active");
+         contactForm.reset();
+      }
 
       console.log(datas, "datas");
    } catch (error) {
@@ -171,6 +192,13 @@ contactForm.addEventListener("submit", (e) => {
    let isMessageValid = checkMessage(value);
 
    if (isNameValid && isEmailValid && isMessageValid && isSubjectValid) {
-      handleSubmit(value);
+      // handleSubmit(value);
+      console.log("submit");
+      getModal.classList.add("active");
    }
+});
+
+closeModal.addEventListener("click", (e) => {
+   getModal.classList.remove("active");
+   stopScroll.classList.remove("active");
 });
