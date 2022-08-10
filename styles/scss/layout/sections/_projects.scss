@@ -1,3 +1,7 @@
+@import "../../components/card";
+
+@import "../../components/slide";
+
 #projects {
    @include flexBox(column, center, center, 0);
    background: $whisper;

@@ -7,6 +7,7 @@ const menuItems = document.querySelectorAll(".menu-item");
 const footerMenuItems = document.querySelectorAll(".footer-item");
 const getBurger = document.querySelector("#burger-checkbox");
 
+/* ================= HAMBURGER ================= */
 /* when menu item click close dropdown menu */
 menuItems.forEach((item) => {
    item.addEventListener("click", () => {
@@ -14,6 +15,7 @@ menuItems.forEach((item) => {
    });
 });
 
+/* ================= MENU ITEM ================= */
 /* function that add/remove active class in menu items */
 const addRemoveClasses = (value, id) => {
    value.classList.contains(`${id}`) ? value.classList.add("active") : value.classList.remove("active");
@@ -37,23 +39,19 @@ const activeLink = (value) => {
       menuItems.forEach((item) => {
          addRemoveClasses(item, getId);
       });
-
-      /* loop for footer menu */
-      footerMenuItems.forEach((item) => {
-         addRemoveClasses(item, getId);
-      });
    }
 };
 
 /* event listener for each section tag and window */
 window.addEventListener("scroll", (e) => {
-   window.scrollY > 50 ? header.classList.add("active") : header.classList.remove("active");
+   window.scrollY > 50 ? addRemoveClasses(header, "my-header") : header.classList.remove("active");
 
    sections.forEach((section) => {
       activeLink(section);
    });
 });
 
+/* ================= CAROUSEL ================= */
 /* variables for slider */
 const project = document.querySelector("#projects");
 const slides = document.querySelectorAll(".card-slide");
@@ -91,6 +89,7 @@ slideBtns.forEach((btn) => {
    });
 });
 
+/* ================= FORMS ================= */
 /* form validation */
 const contactForm = document.querySelector("#contact-form");
 
@@ -123,6 +122,17 @@ const checkEmail = (item) => {
    return false;
 };
 
+const checkSubject = (item) => {
+   let name = item.name.value.trim();
+   let maxLength = name.length;
+
+   if (isRequired(name) && maxLength <= 30) {
+      return true;
+   }
+
+   return false;
+};
+
 const checkMessage = (item) => {
    let message = item.message.value.trim();
    let maxLength = message.length;
@@ -134,19 +144,33 @@ const checkMessage = (item) => {
    return false;
 };
 
+const getUrl = "https://formspree.io/f/xaykywrp";
+const method = "post";
+
+const handleSubmit = async (value) => {
+   let data = new FormData(value);
+
+   try {
+      const res = await fetch(getUrl, { method: method, body: data, headers: { Accept: "application/json" } });
+
+      const datas = await res.json();
+
+      console.log(datas, "datas");
+   } catch (error) {
+      console.log(error);
+   }
+};
+
 contactForm.addEventListener("submit", (e) => {
    e.preventDefault();
    let value = e.target;
 
    let isNameValid = checkName(value);
    let isEmailValid = checkEmail(value);
+   let isSubjectValid = checkSubject(value);
    let isMessageValid = checkMessage(value);
 
-   if (isNameValid && isEmailValid && isMessageValid) {
-      value.action = "https://formspree.io/f/xaykywrp";
-      value.method = "POST";
-
-      console.log(value.action, "action");
-      console.log(value.method, "method");
+   if (isNameValid && isEmailValid && isMessageValid && isSubjectValid) {
+      handleSubmit(value);
    }
 });
