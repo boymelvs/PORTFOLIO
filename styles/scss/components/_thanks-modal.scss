@@ -1,0 +1,81 @@
+#thanks-modal {
+   @include flexBox(row, center, center, 0);
+   position: fixed;
+   top: 0;
+   padding: 2rem;
+   max-width: 144rem;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.6);
+   animation: fadeOut 500ms ease-in-out forwards;
+
+   & .thanks-message {
+      @include flexBox(column, center, center, 2rem);
+      background: linear-gradient(45deg, hsl(212deg, 29%, 13%) 0%, hsl(204deg, 82%, 42%) 150%);
+      width: 100%;
+      height: 35rem;
+      border-radius: 1rem;
+      position: relative;
+
+      @media (min-width: 576px) {
+         width: 60%;
+      }
+
+      & .close-modal {
+         position: absolute;
+         top: 2rem;
+         right: 2rem;
+         font-size: 2.5rem;
+         font-weight: $font-weight-600;
+
+         &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+         }
+      }
+
+      & .thank-you-title {
+         font-size: 3.5rem;
+
+         @media (min-width: 576px) {
+            font-size: 5rem;
+         }
+      }
+   }
+}
+
+/* ================= all about animation ================= */
+
+#stopScroll.active {
+   overflow: hidden; /* stop body to scroll while modal is open */
+}
+
+#thanks-modal.active {
+   z-index: 100;
+   visibility: visible;
+   animation: fadeIn 500ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      transform: translateY(6rem);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   100% {
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-6rem);
+   }
+}
