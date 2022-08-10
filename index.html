@@ -505,19 +505,19 @@
                      <h2>Lets Talk</h2>
                      <div class="field-container">
                         <label for="first-name">Name</label>
-                        <input type="text" name="name" id="name" class="form-field" placeholder="Huwan Delakrus" minlength="5" maxlength="32" />
+                        <input type="text" name="name" id="name" class="form-field" placeholder="Huwan Delakrus" minlength="5" maxlength="32" required />
                         <div class="warning">Must not be empty & minimum of 5 characters.</div>
                      </div>
 
                      <div class="field-container">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" class="form-field" placeholder="huwan@example.com" maxlength="32" />
+                        <input type="email" name="email" id="email" class="form-field" placeholder="huwan@example.com" maxlength="32" required />
                         <div class="warning">Email is required. Must not be empty.</div>
                      </div>
 
                      <div class="field-container">
                         <label for="subject">Subject</label>
-                        <input type="text" name="subject" id="subject" class="form-field" placeholder="Job Offer" minlength="5" maxlength="32" />
+                        <input type="text" name="subject" id="subject" class="form-field" placeholder="Job Offer" minlength="5" maxlength="32" required />
                         <div class="warning">Must not be empty & minimum of 5 characters.</div>
                      </div>
 
@@ -532,6 +532,7 @@
                            placeholder="Please contact me in the above email address."
                            minlength="5"
                            maxlength="200"
+                           required
                         ></textarea>
                         <div class="warning">Message must not be empty & minimum of 5 characters.</div>
                      </div>
