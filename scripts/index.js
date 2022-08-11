@@ -176,7 +176,7 @@ const handleSubmit = async (value) => {
 
    try {
       const res = await fetch(getUrl, { method: method, body: data, headers: { Accept: "application/json" } });
-      const datas = await res.json();
+      // const datas = await res.json();
 
       if (res.ok) {
          getModal.setAttribute("class", "active show");
