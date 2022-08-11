@@ -991,9 +991,16 @@
 #contacts .contact-content form .field-container textarea::placeholder {
   color: hsl(0deg, 0%, 70%);
 }
+#contacts .contact-content form .field-container input.active,
+#contacts .contact-content form .field-container textarea.active {
+  background-image: url("../../../../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: center right 2rem;
+}
 #contacts .contact-content form .field-container .warning {
   visibility: hidden;
-  text-align: left;
+  text-align: center;
   font-size: 1.2rem;
   color: hsl(0deg, 100%, 63%);
   height: 1.3rem;

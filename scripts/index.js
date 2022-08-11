@@ -126,6 +126,7 @@ const checkName = (item) => {
    }
 
    showWarning(element.nextElementSibling, "add");
+   showWarning(element, "add");
    return false;
 };
 
@@ -142,6 +143,7 @@ const checkEmail = (item) => {
    }
 
    showWarning(element.nextElementSibling, "add");
+   showWarning(element, "add");
    return false;
 };
 
@@ -155,6 +157,7 @@ const checkSubject = (item) => {
    }
 
    showWarning(element.nextElementSibling, "add");
+   showWarning(element, "add");
    return false;
 };
 
@@ -168,6 +171,7 @@ const checkMessage = (item) => {
    }
 
    showWarning(element.nextElementSibling, "add");
+   showWarning(element, "add");
    return false;
 };
 
@@ -234,6 +238,7 @@ contactForm === null
                  if (checkName(contactForm)) {
                     let element = contactForm.name;
                     showWarning(element.nextElementSibling, "remove");
+                    showWarning(element, "remove");
                  }
                  break;
 
@@ -241,6 +246,7 @@ contactForm === null
                  if (checkEmail(contactForm)) {
                     let element = contactForm.email;
                     showWarning(element.nextElementSibling, "remove");
+                    showWarning(element, "remove");
                  }
                  break;
 
@@ -248,6 +254,7 @@ contactForm === null
                  if (checkSubject(contactForm)) {
                     let element = contactForm.subject;
                     showWarning(element.nextElementSibling, "remove");
+                    showWarning(element, "remove");
                  }
                  break;
 
@@ -255,6 +262,7 @@ contactForm === null
                  if (checkMessage(contactForm)) {
                     let element = contactForm.message;
                     showWarning(element.nextElementSibling, "remove");
+                    showWarning(element, "remove");
                  }
            }
         }, 500);
