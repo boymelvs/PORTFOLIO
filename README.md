@@ -7,6 +7,10 @@
 -  📫 How to reach me? **melvin.enmocino@gmail.com**
 -  Live Site: **[Portfolio](https://boymelvs.github.io/PORTFOLIO)**.
 
+<!-- WAKA TIME -->
+
+[![wakatime](https://wakatime.com/badge/user/6db23332-0136-4358-b6c1-5d0d6f135c10.svg)](https://wakatime.com/@6db23332-0136-4358-b6c1-5d0d6f135c10)
+
 ### Connect with me:
 
 <p align="left">
@@ -79,14 +83,12 @@
 
 <!-- WAKA TIME -->
 
-<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/wakatime?username=boymelvs&hide=JSX,Markdown,EJS,XML,Text,Other,CSV,Vue.js,Git Config,JCL,COBOLFree,COBOL,TypeScript,Bash,PHP,SQL,Python" alt="Melvin's wakatime stats" /></a>
+<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/wakatime?username=boymelvs&hide=JSX,Markdown,EJS,XML,Text,Other,CSV,Vue.js,JCL,COBOLFree,COBOL,TypeScript,Bash,PHP,SQL,Python" alt="Melvin's wakatime stats" /></a>
 
 <!-- GITHUB CARDS -->
 <div align=center styles="display:grid; grid-template-columns: 1fr 1fr; gap:1px;">
 
-<a href="https://boymelvs.github.io/travel-and-tours/" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=travel-and-tours" alt="Travel and Tours Website" />
-
-</a>
+<a href="https://boymelvs.github.io/travel-and-tours/" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=travel-and-tours" alt="Travel and Tours Website" /></a>
 
 <a href="https://boymelvs.github.io/pairgo/" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=boymelvs&repo=pairgo" alt="Pairgo Website" /></a>
 
