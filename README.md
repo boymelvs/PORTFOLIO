@@ -1,6 +1,6 @@
 # Hi there, I'm Melvin 👋
 
-### A Full Stack Developer from the Philippines 👨‍💻
+### A Career Shifter and has a strong desire to become a Full Stack Developer 👨‍💻
 
 -  🌱 I’m currently enrolled at **KODEGOPH Bootcamp**.
 -  👀 Interested to learn more in **Node js**, **React js**.
@@ -83,7 +83,7 @@
 
 <!-- WAKA TIME -->
 
-<a href="#" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/wakatime?username=boymelvs&hide=JSX,Markdown,EJS,XML,Text,Other,CSV,Vue.js,JCL,COBOLFree,COBOL,TypeScript,Bash,PHP,SQL,Python" alt="Melvin's wakatime stats" /></a>
+<a href="https://wakatime.com/@boymelvs" target="_blank" rel="noreferrer"><img align="center" width="100%" src="https://github-readme-stats.vercel.app/api/wakatime?username=boymelvs&hide=JSX,Markdown,EJS,XML,Text,Other,CSV,Vue.js,JCL,COBOLFree,COBOL,TypeScript,Bash,PHP,SQL,Python" alt="Melvin's wakatime stats" /></a>
 
 <!-- GITHUB CARDS -->
 <div align=center styles="display:grid; grid-template-columns: 1fr 1fr; gap:1px;">
