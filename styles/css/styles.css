@@ -1009,9 +1009,10 @@
   visibility: visible;
 }
 #contacts .contact-content form #send-btn {
-  padding: 1rem 5rem;
   background: hsl(204deg, 82%, 42%);
   font-size: 2rem;
+  border-radius: 0.5rem;
+  min-width: 60%;
 }
 @media (min-width: 768px) {
   #contacts .contact-content form #send-btn {

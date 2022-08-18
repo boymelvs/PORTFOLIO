@@ -80,9 +80,10 @@
 
          & #send-btn {
             @extend %button-style;
-            padding: 1rem 5rem;
             background: $navy-blue;
             font-size: 2rem;
+            border-radius: 0.5rem;
+            min-width: 60%;
 
             @media (min-width: 768px) {
                padding: 1rem 6rem;
