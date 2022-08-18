@@ -5,7 +5,8 @@
    height: 35rem;
    border-radius: 1rem;
    background: $whisper;
-   box-shadow: 0 0 0.4rem 0.2rem rgba(19, 125, 195, 0.8);
+   border: 0.1rem solid $black-pearl;
+   box-shadow: 0rem 0.3rem rgba(0, 0, 0, 0.5);
 
    .card-title {
       text-align: center;
