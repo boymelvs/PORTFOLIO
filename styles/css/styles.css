@@ -685,36 +685,42 @@
 
 .slider {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0;
   margin: 0 auto;
   width: 30rem;
-  height: 40rem;
+  height: 150rem;
   position: relative;
   overflow: hidden;
 }
 @media (min-width: 768px) {
   .slider {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    gap: 0;
-    width: 65rem;
-  }
-}
-@media (min-width: 1024px) {
-  .slider {
     width: 98rem;
   }
 }
 .slider .card-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  padding: 2rem 0;
   position: absolute;
-  top: 10%;
+  top: 0;
+  transform: translateX(345%);
   transition: all 1s ease-in-out;
-  transform: translateX(350%);
+}
+@media (min-width: 768px) {
+  .slider .card-slide {
+    left: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .slider .card-slide {
+    left: 3%;
+  }
 }
 .slider .card-slide:nth-child(1) {
   transform: translateX(0%);
@@ -728,20 +734,10 @@
 .slider .card-slide.card-last {
   background: transparent;
 }
-@media (min-width: 768px) {
-  .slider .card-slide {
-    left: 3.5%;
-  }
-}
-@media (min-width: 1024px) {
-  .slider .card-slide {
-    left: 3%;
-  }
-}
 .slider .btn {
   position: absolute;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   padding: 1rem;
   border: none;
   border-radius: 50%;

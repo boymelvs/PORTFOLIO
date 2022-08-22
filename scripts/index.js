@@ -56,42 +56,30 @@ window.addEventListener("scroll", (e) => {
 const project = document.querySelector("#projects");
 const slides = document.querySelectorAll(".card-slide");
 const slideBtns = document.querySelectorAll(".btn");
-let screenWidth = 0;
-let currentSlide = 0;
-let showCard = 2;
-let maxSlide = slides.length - showCard;
 
-let getScreenWidth = () => {
-   screenWidth = project.getBoundingClientRect().width;
-   showCard = screenWidth < 768 ? 1 : 2;
-};
+let currentSlide = 0;
+let maxSlide = slides.length - 1;
 
 // loop through slides and set each slides translateX property to index * 115%
-const activeSlide = () => {
-   getScreenWidth();
-
+const activeSlide = (currentSlide) => {
    slides.forEach((slide, index) => {
       slide.style.transform = `translateX(${(index - currentSlide) * 115}%)`;
    });
 };
-activeSlide();
+
+activeSlide(currentSlide);
 
 /* carousel buttons */
 slideBtns.forEach((btn) => {
    btn.addEventListener("click", (e) => {
       if (btn.classList.contains("btn-next")) {
-         if (currentSlide == 12 && showCard === 2) {
-            currentSlide == 12;
-            return;
-         }
-
-         currentSlide = currentSlide > maxSlide ? currentSlide : currentSlide + showCard;
-         activeSlide();
+         currentSlide = currentSlide >= maxSlide ? currentSlide : currentSlide + 1;
+         activeSlide(currentSlide);
       }
 
       if (btn.classList.contains("btn-prev")) {
-         currentSlide = currentSlide <= 0 ? 0 : currentSlide - showCard;
-         activeSlide();
+         currentSlide = currentSlide <= 0 ? currentSlide : currentSlide - 1;
+         activeSlide(currentSlide);
       }
    });
 });
