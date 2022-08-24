@@ -1,0 +1,94 @@
+#experience {
+   background: $whisper;
+   color: $black-pearl;
+   padding: 5rem 2rem 2rem 2rem;
+
+   @media (min-width: 1201px) {
+      padding: 5rem 6rem 2rem 6rem;
+   }
+
+   & h2 {
+      font-size: 3.5rem;
+      text-align: center;
+      letter-spacing: 0.3rem;
+
+      @media (min-width: 980px) {
+         font-size: 5rem;
+         text-align: left;
+      }
+   }
+
+   & .work-experience-content {
+      padding: 3rem 0;
+      border-top: 0.5rem solid $navy-blue;
+
+      & .job {
+         @include flexBox(column, center, center, 0);
+         text-align: center;
+         font-weight: $font-weight-600;
+         width: 100%;
+         color: $black-pearl;
+
+         @media (min-width: 768px) {
+            font-size: 2.5rem;
+         }
+
+         @media (min-width: 980px) {
+            align-items: flex-start;
+            text-align: left;
+         }
+
+         & span {
+            padding-bottom: 0.5rem;
+            border-bottom: 0.15rem solid $black-pearl;
+            letter-spacing: 0.2rem;
+         }
+      }
+
+      & .companies {
+         margin-top: 2rem;
+         padding: 0 2rem;
+
+         @media (min-width: 768px) {
+            padding: 0 3rem 0 5rem;
+         }
+
+         & .last_company,
+         & .other_company {
+            padding-bottom: 4rem;
+            text-align: justify;
+
+            @media (min-width: 768px) {
+               font-size: 2.5rem;
+            }
+
+            & .project {
+               margin-top: 20px;
+               font-weight: $font-weight-600;
+
+               @media (min-width: 768px) {
+                  font-size: 2rem;
+               }
+            }
+
+            & .jobsite {
+               padding-left: 30px;
+            }
+
+            & .duties {
+               margin-top: 20px;
+               font-weight: $font-weight-600;
+
+               @media (min-width: 768px) {
+                  font-size: 2rem;
+               }
+            }
+
+            & .responsiblity {
+               padding-left: 30px;
+               list-style: circle;
+            }
+         }
+      }
+   }
+}

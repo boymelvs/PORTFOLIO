@@ -13,11 +13,13 @@
    }
 
    & h2 {
-      font-size: 5rem;
+      font-size: 3.5rem;
       text-align: center;
       width: 100%;
+      letter-spacing: 0.3rem;
 
       @media (min-width: 980px) {
+         font-size: 5rem;
          text-align: left;
       }
    }
@@ -26,6 +28,7 @@
       padding: 3rem 0 3rem 0;
       border-top: 0.5rem solid $navy-blue;
       width: 100%;
+      overflow: hidden;
 
       & .projects-subtitle {
          @include flexBox(column, center, center, 0);
@@ -38,6 +41,10 @@
          @media (min-width: 980px) {
             align-items: flex-start;
             text-align: left;
+         }
+
+         & span {
+            letter-spacing: 0.2rem;
          }
 
          & .bottom {
