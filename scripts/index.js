@@ -102,6 +102,7 @@ const isRequired = (value) => {
 
 const showWarning = (element, isAdded) => {
    isAdded === "remove" ? element.classList.remove("active") : element.classList.add("active");
+   isAdded === "remove" ? element.classList.add("green-border") : element.classList.remove("green-border");
 };
 
 const checkName = (item) => {
