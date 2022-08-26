@@ -2,16 +2,17 @@
    @include flexBox(column, center, center, 6rem);
    color: $azure;
    width: 100%;
-   padding: 2rem 2rem 0 2rem;
+   padding: 2rem;
    height: 100%;
 
    @media (min-width: 768px) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
+      padding: 2rem 4rem;
    }
 
    @media (min-width: 1201px) {
-      padding: 2rem 6rem 0 6rem;
+      padding: 2rem 6rem;
    }
 
    & .left {

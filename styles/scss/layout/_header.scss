@@ -21,6 +21,10 @@
       box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
    }
 
+   @media (min-width: 768px) {
+      padding: 2rem 4rem;
+   }
+
    @media (min-width: 1201px) {
       padding: 2rem 6rem;
    }

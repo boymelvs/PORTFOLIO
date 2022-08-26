@@ -121,6 +121,12 @@
 }
 @media (min-width: 950px) {
   .logo-container .logo img {
+    width: 7rem;
+    height: 4rem;
+  }
+}
+@media (min-width: 1201px) {
+  .logo-container .logo img {
     width: 12rem;
     height: 6rem;
   }
@@ -139,6 +145,13 @@
   }
 }
 @media (min-width: 950px) {
+  .logo-container .logo .melvin-text {
+    width: 11rem;
+    height: 4rem;
+    margin-left: -17rem;
+  }
+}
+@media (min-width: 1201px) {
   .logo-container .logo .melvin-text {
     width: 11rem;
     height: 4rem;
@@ -343,6 +356,11 @@
   background: linear-gradient(45deg, hsl(212deg, 29%, 13%) 0%, hsl(204deg, 82%, 42%) 150%);
   box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
 }
+@media (min-width: 768px) {
+  .my-header {
+    padding: 2rem 4rem;
+  }
+}
 @media (min-width: 1201px) {
   .my-header {
     padding: 2rem 6rem;
@@ -366,18 +384,19 @@
   gap: 6rem;
   color: hsl(180deg, 8%, 97%);
   width: 100%;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem;
   height: 100%;
 }
 @media (min-width: 768px) {
   #home {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    padding: 2rem 4rem;
   }
 }
 @media (min-width: 1201px) {
   #home {
-    padding: 2rem 6rem 0 6rem;
+    padding: 2rem 6rem;
   }
 }
 #home .left {

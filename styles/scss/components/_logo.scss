@@ -13,6 +13,11 @@
          transition: all 500ms ease-in-out;
 
          @media (min-width: 950px) {
+            width: 7rem;
+            height: 4rem;
+         }
+
+         @media (min-width: 1201px) {
             width: 12rem;
             height: 6rem;
          }
@@ -32,6 +37,12 @@
          }
 
          @media (min-width: 950px) {
+            width: 11rem;
+            height: 4rem;
+            margin-left: -17rem;
+         }
+
+         @media (min-width: 1201px) {
             width: 11rem;
             height: 4rem;
             margin-left: -22rem;
