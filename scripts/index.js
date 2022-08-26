@@ -112,7 +112,7 @@ const checkName = (item) => {
    let maxLength = name.length;
    let element = item.name;
 
-   if (isRequired(name) && maxLength >= 5 && maxLength < 31) {
+   if (isRequired(name) && maxLength >= 5 && maxLength < 51) {
       return true;
    }
 
@@ -130,7 +130,7 @@ const checkEmail = (item) => {
    const emailFormat = /[^@ \t\r\n]+@[^@ \t\r\n]+\.(\w{2,3})+$/;
    const isEmailCorrect = emailFormat.test(email);
 
-   if (isRequired(email) && maxLength < 31 && isEmailCorrect) {
+   if (isRequired(email) && maxLength < 51 && isEmailCorrect) {
       return true;
    }
 
@@ -145,7 +145,7 @@ const checkSubject = (item) => {
    let maxLength = name.length;
    let element = item.subject;
 
-   if (isRequired(name) && maxLength >= 5 && maxLength < 31) {
+   if (isRequired(name) && maxLength >= 5 && maxLength < 51) {
       return true;
    }
 
@@ -160,7 +160,7 @@ const checkMessage = (item) => {
    let maxLength = message.length;
    let element = item.message;
 
-   if (isRequired(message) && maxLength >= 5 && maxLength < 201) {
+   if (isRequired(message) && maxLength >= 5 && maxLength < 251) {
       return true;
    }
 
@@ -174,7 +174,6 @@ const handleSubmit = async (value) => {
 
    try {
       const res = await fetch(getUrl, { method: method, body: data, headers: { Accept: "application/json" } });
-      // const datas = await res.json();
 
       if (res.ok) {
          getModal.setAttribute("class", "active show");
