@@ -367,7 +367,7 @@
   color: hsl(180deg, 8%, 97%);
   width: 100%;
   padding: 2rem 2rem 0 2rem;
-  min-height: 50vh;
+  height: 100%;
 }
 @media (min-width: 768px) {
   #home {
