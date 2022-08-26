@@ -38,10 +38,6 @@
 
 <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img align="left" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" style="padding-right:10px;" /></a>
 
-<!-- TAILWIND logo -->
-
-<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img align="left" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" style="padding-right:10px;" /></a>
-
 <!-- REACT JS logo -->
 
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img align="left" width="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React JS" style="padding-right:10px;" /></a>
