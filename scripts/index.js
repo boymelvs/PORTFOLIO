@@ -100,7 +100,7 @@ const isRequired = (value) => {
    return value ? true : false;
 };
 
-/* showWarning  */
+/* showWarning if invalid/valid */
 const showWarning = (element, isAdded) => {
    isAdded === "remove" ? element.classList.remove("active") : element.classList.add("active");
    isAdded === "remove" ? element.classList.add("green-border") : element.classList.remove("green-border");
@@ -213,6 +213,11 @@ closeModal &&
 /* ================= REAL TIME FORM VALIDATION ================= */
 let timeOut;
 
+const removeWarning = (element) => {
+   showWarning(element, "remove");
+   showWarning(element.nextElementSibling, "remove");
+};
+
 contactForm &&
    contactForm.addEventListener("input", (e) => {
       e.preventDefault();
@@ -227,32 +232,28 @@ contactForm &&
             case "name":
                if (checkName(contactForm)) {
                   let element = contactForm.name;
-                  showWarning(element.nextElementSibling, "remove");
-                  showWarning(element, "remove");
+                  removeWarning(element);
                }
                break;
 
             case "email":
                if (checkEmail(contactForm)) {
                   let element = contactForm.email;
-                  showWarning(element.nextElementSibling, "remove");
-                  showWarning(element, "remove");
+                  removeWarning(element);
                }
                break;
 
             case "subject":
                if (checkSubject(contactForm)) {
                   let element = contactForm.subject;
-                  showWarning(element.nextElementSibling, "remove");
-                  showWarning(element, "remove");
+                  removeWarning(element);
                }
                break;
 
             case "message":
                if (checkMessage(contactForm)) {
                   let element = contactForm.message;
-                  showWarning(element.nextElementSibling, "remove");
-                  showWarning(element, "remove");
+                  removeWarning(element);
                }
          }
       }, 500);
