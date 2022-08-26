@@ -51,7 +51,7 @@ window.addEventListener("scroll", (e) => {
    });
 });
 
-/* ================= CAROUSEL ================= */
+/* ================= SLIDE ================= */
 /* variables for slider */
 const project = document.querySelector("#projects");
 const slides = document.querySelectorAll(".card-slide");
@@ -69,7 +69,7 @@ const activeSlide = (currentSlide) => {
 
 activeSlide(currentSlide);
 
-/* carousel buttons */
+/* slide buttons */
 slideBtns.forEach((btn) => {
    btn.addEventListener("click", (e) => {
       if (btn.classList.contains("btn-next")) {
@@ -95,22 +95,24 @@ const getUrl = "https://formspree.io/f/xaykywrp";
 const method = "post";
 const getWarnings = document.querySelectorAll(".warning");
 
-/* form validation */
+/* validation if empty */
 const isRequired = (value) => {
    return value ? true : false;
 };
 
+/* showWarning  */
 const showWarning = (element, isAdded) => {
    isAdded === "remove" ? element.classList.remove("active") : element.classList.add("active");
    isAdded === "remove" ? element.classList.add("green-border") : element.classList.remove("green-border");
 };
 
+/* validation for name */
 const checkName = (item) => {
-   let name = item.name.value;
+   let name = item.name.value.trim();
    let maxLength = name.length;
    let element = item.name;
 
-   if (isRequired(name) && maxLength >= 5 && maxLength <= 30) {
+   if (isRequired(name) && maxLength >= 5 && maxLength < 31) {
       return true;
    }
 
@@ -119,6 +121,7 @@ const checkName = (item) => {
    return false;
 };
 
+/* validation for email */
 const checkEmail = (item) => {
    let email = item.email.value.trim();
    let maxLength = email.length;
@@ -127,7 +130,7 @@ const checkEmail = (item) => {
    const emailFormat = /[^@ \t\r\n]+@[^@ \t\r\n]+\.(\w{2,3})+$/;
    const isEmailCorrect = emailFormat.test(email);
 
-   if (isRequired(email) && maxLength <= 30 && isEmailCorrect) {
+   if (isRequired(email) && maxLength < 31 && isEmailCorrect) {
       return true;
    }
 
@@ -136,12 +139,13 @@ const checkEmail = (item) => {
    return false;
 };
 
+/* validation for subject */
 const checkSubject = (item) => {
    let name = item.subject.value.trim();
    let maxLength = name.length;
    let element = item.subject;
 
-   if (isRequired(name) && maxLength >= 5 && maxLength <= 30) {
+   if (isRequired(name) && maxLength >= 5 && maxLength < 31) {
       return true;
    }
 
@@ -150,12 +154,13 @@ const checkSubject = (item) => {
    return false;
 };
 
+/* validation for message */
 const checkMessage = (item) => {
    let message = item.message.value.trim();
    let maxLength = message.length;
    let element = item.message;
 
-   if (isRequired(message) && maxLength >= 5 && maxLength <= 200) {
+   if (isRequired(message) && maxLength >= 5 && maxLength < 201) {
       return true;
    }
 
