@@ -1,11 +1,11 @@
 # Hi there, I'm Melvin 👋
 
-### A Career Shifter and has a strong desire to become a Full Stack Developer 👨‍💻
+### A career shifter and has strong desire to become a Full Stack Web Developer 👨‍💻
 
 -  🌱 I’m currently enrolled at **KODEGOPH Bootcamp**.
 -  👀 Interested to learn more in **Node js**, **React js**.
 -  📫 How to reach me? **melvin.enmocino@gmail.com**
--  Live Site: **[Portfolio](https://boymelvs.github.io/PORTFOLIO)**.
+-  Live Site: **[Portfolio](https://boymelvs.vercel.app/)**.
 
 <!-- WAKA TIME -->
 
